@@ -64,18 +64,18 @@
 
 	pwmleds {
 		compatible = "pwm-leds";
-		pwm_led_0 { // P0.07
-			pwms = <&pwm0 7>;
+		pwm_led_0: pwm_led_green { // P0.07
+			pwms = <&pwm0 7 10000 PWM_POLARITY_NORMAL>;
 			label = "Green PWM LED";
 			status = "okay";
 		};
-		pwm_led_1 { // P0.05
-			pwms = <&pwm0 5>;
+		pwm_led_1: pwm_led_red { // P0.05
+			pwms = <&pwm0 5 10000 PWM_POLARITY_NORMAL>;
 			label = "Red PWM LED";
 			status = "okay";
 		};
-		pwm_led_2 { // P1.09
-			pwms = <&pwm1 9>;
+		pwm_led_2: pwm_led_blue { // P1.09
+			pwms = <&pwm1 9 10000 PWM_POLARITY_NORMAL>;
 			label = "Blue PWM LED";
 			status = "okay";
 		};
