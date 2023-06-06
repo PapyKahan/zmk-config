@@ -86,7 +86,7 @@
     buzzer: pwm_buzzer {
         compatible = "pwm-buzzer";
         label = "PWM BUZZER";
-        pwms = <&pwm0 23 10000 PWM_POLARITY_NORMAL>;
+        pwms = <&pwm0 23 0 PWM_POLARITY_NORMAL>;
         status = "okay";
     };
 
