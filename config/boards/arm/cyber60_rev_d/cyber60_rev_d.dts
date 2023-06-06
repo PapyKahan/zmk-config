@@ -64,17 +64,17 @@
 
 	pwmleds {
 		compatible = "pwm-leds";
-		pwm_led_0: pwm_led_green { // P0.07
+		pwm_led_0 { // P0.07
 			pwms = <&pwm0 7>;
 			label = "Green PWM LED";
 			status = "okay";
 		};
-		pwm_led_1: pwm_led_red { // P0.05
+		pwm_led_1 { // P0.05
 			pwms = <&pwm0 5>;
 			label = "Red PWM LED";
 			status = "okay";
 		};
-		pwm_led_2: pwm_led_blue { // P1.09
+		pwm_led_2 { // P1.09
 			pwms = <&pwm1 9>;
 			label = "Blue PWM LED";
 			status = "okay";
@@ -82,7 +82,7 @@
 	};
 	
 	
-// PWM buzzer config
+    // PWM buzzer config
     buzzer: pwm_buzzer {
         compatible = "pwm-buzzer";
         label = "PWM BUZZER";
