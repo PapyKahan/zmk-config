@@ -39,7 +39,7 @@
 				&kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp DEL
 				&trans &trans &kp UP &trans &trans &trans &trans &out OUT_USB &kp INS &trans &kp PSCRN &bt BT_PRV &bt BT_NXT &rgb_ug RGB_TOG
 				&trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &kp HOME  &kp PG_UP   &bootloader
-				&trans &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &bl BL_INC &bl BL_DEC &out OUT_BLE &trans &trans &kp END &kp PG_DN  &bl BL_TOG
+				&trans &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &bl BL_INC &bl BL_DEC &out OUT_BLE &trans &kp K_MUTE2 &kp END &kp PG_DN  &bl BL_TOG
 				&trans &trans  &trans              &trans                            &trans   &trans   &sys_reset &bt BT_CLR
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
