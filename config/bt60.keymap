@@ -32,7 +32,7 @@
 				// | ` | F1  | F2  |  F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 | F12 |   DEL
 				// |    | HOME | UP  | END |     |     |     |     | INS |     | PTSC |     |       | RGB_TOG  |
 				// |     |  LEFT  | DOWN | RIGHT |     |     |     |     |     |     |     | PGUP |     BOOTLOADER
-				// |          | VOLD | VOLU | MUTE | BL_INC | BL_DEC |     |     |     |     | PGDW  |      BL_TOG
+				// |          | VOLD | VOLU | MUTE | BL_INC | BL_DEC | BT 0 | BT 1 | BT 2 | BT 3 | PGDW  |      BL_TOG
 				// |        |       |       |                               |     |     |  RESET    |  BT_CLR
 				// ------------------------------------------------------------------------------------------
 			bindings = <
