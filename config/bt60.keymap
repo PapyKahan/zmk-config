@@ -33,16 +33,16 @@
 		raise {
 // ------------------------------------------------------------------------------------------
 // | ` | F1  | F2  |  F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 | F12 |   DEL
-// |    | HOME | UP  | END |     |     |     |     | INS |     | PTSC |     |       | RGB_TOG  |
+// |    | HOME | UP  | END |     |     |     |     | INS |     | PTSC |     |       |       |
 // |     |  LEFT  | DOWN | RIGHT |     |     |     |     |     |     |     | PGUP |     BOOTLOADER
-// |          | VOLD | VOLU | MUTE | BL_INC | BL_DEC |      |      |      |      | PGDW  |      BL_TOG
+// |          |      |     |      | BL_INC | BL_DEC |      |      |      |      | PGDW  |      BL_TOG
 // |        |       |       |                               |     |     |  RESET    |  
 // ------------------------------------------------------------------------------------------
 			bindings = <
 				&kp GRAVE &kp F1 &kp F2 &kp F3 &kp F4 &kp F5 &kp F6 &kp F7 &kp F8 &kp F9 &kp F10 &kp F11 &kp F12 &kp DEL
-				&trans &kp HOME &kp UP &kp END &trans &trans &trans &trans &kp INS &trans &kp PSCRN &trans &trans &rgb_ug RGB_TOG
+				&trans &kp HOME &kp UP &kp END &trans &trans &trans &trans &kp INS &trans &kp PSCRN &trans &trans &trans
 				&trans &kp LEFT &kp DOWN &kp RIGHT &trans &trans &trans &trans &trans &trans &trans  &kp PG_UP   &bootloader
-				&trans &kp C_VOL_DN &kp C_VOL_UP &kp C_MUTE &bl BL_INC &bl BL_DEC &trans &trans &trans &trans &kp PG_DN  &bl BL_TOG
+				&trans &trans &trans &trans &trans &trans &trans &trans &trans &trans &kp PG_DN  &trans
 				&trans &trans  &trans              &trans                            &trans   &trans   &sys_reset &trans
 			>;
 			sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
@@ -56,8 +56,8 @@
 // |        |       |       |                               |     |     |           |        
 // ------------------------------------------------------------------------------------------
 			bindings = <
-				&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &none &none &none &none &none &none &none &none
-				&none &none &none &none &none &none &none &none &none &none &none &none &none &none
+				&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &none &none &none &none &kp C_MUTE &kp C_VOL_DN &kp C_VOL_UP &none &none
+				&none &none &none &none &none &none &none &none &none &none &none &bl BL_INC &bl BL_DEC &bl BL_TOG
 				&none &none &none &none &none &none &none &none &none &none &none &none &none
 				&none &none &none &none &none &none &none &none &none &none &none &none
 				&none &none &none                    &none                        &none &none &none &none
