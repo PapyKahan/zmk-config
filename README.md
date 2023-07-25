@@ -1,13 +1,21 @@
-# zmk-config-4pplet
+# My personal ZMK configs
 
-ZMK-config for 4pplet keyboards. Currently supported keyboards:
+## TOFU60 v2
 
-# Cyber60
-https://github.com/4pplet/cyber60
+If you reset the configuration the default bootloader keymap : Unplug the keyboard, hold down ESC and then plug the keyboard.
 
-# Default firmware:
-![alt text](./readme-images/default_fw_20230120.jpg "Default firmware")
+### Keymapping
+3 layers :
+- Defaut
+- Raise with navigation keys
+- Configuration layer to set the volume, start the bootloader and reset the firmware
 
-# Status:
-- Revision B, C and D: Buzzer and RGB led implemented as Bluetooth profile indicators but currently only working using a local build: https://github.com/4pplet/zmk
-- Updated to Zephyr 3.0
+## BT60 v2
+
+If you reset the configuration the default bootloader keymap : FN+ENTER
+
+### Keymapping
+3 layers :
+- Defaut
+- Raise with navigation keys
+- Configuration layer to pair bluetooth, configure backlight, set the volume, start the bootloader and reset the firmware
