@@ -4,123 +4,125 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#include <zephyr.h>
-#include <kernel.h>
-#include <device.h>
-#include <devicetree.h>
-#include <drivers/pwm.h>
+#include <zephyr/kernel.h>
+#include <zephyr/device.h>
+#include <zephyr/devicetree.h>
+#include <zephyr/drivers/pwm.h>
 
-#include <bluetooth/services/bas.h>
+#include <zephyr/bluetooth/services/bas.h>
 
-#include <logging/log.h>
+#include <zephyr/logging/log.h>
 LOG_MODULE_DECLARE(zmk, CONFIG_ZMK_LOG_LEVEL);
 
 #include <zmk/ble.h>
 #include <zmk/event_manager.h>
+#include <zmk/endpoints.h>
+#include <zmk/endpoints_types.h>
 #include <zmk/events/ble_active_profile_changed.h>
+#include <zmk/events/endpoint_changed.h>
 
 #define BUZZER_NODE DT_ALIAS(buzzer)
 
 #if !DT_NODE_HAS_STATUS(BUZZER_NODE, okay)
 #error "Unsupported board: buzzer devicetree alias is not defined"
-#define BUZZ_LABEL ""
-#define BUZZ_CHANNEL 0
-#define BUZZ_FLAGS 0
 #else
-#define BUZZ_LABEL DT_LABEL(DT_PWMS_CTLR(BUZZER_NODE))
-#define BUZZ_CHANNEL DT_PWMS_CHANNEL(BUZZER_NODE)
-#define BUZZ_FLAGS DT_PWMS_FLAGS(BUZZER_NODE)
+
 #endif
 
-#define PERIOD_MIN     50
-#define PERIOD_MAX     3900
-#define PERIOD_INIT    1500
+#define BEEP_DURATION K_MSEC(60)
 
-#define BEEP_DURATION  K_MSEC(60)
+static const struct pwm_dt_spec pwm = PWM_DT_SPEC_GET(BUZZER_NODE);
 
-void _play(const struct device *pwm, uint32_t period)
-{
-    pwm_pin_set_usec(pwm, BUZZ_CHANNEL, period, period / 2U, BUZZ_FLAGS);
+static void _play(uint32_t period) {
+    if (!device_is_ready(pwm.dev)) {
+        printk("Error: PWM device %s is not ready\n", pwm.dev->name);
+        return;
+    }
+    pwm_set_dt(&pwm, period, period / 2U); // attempt at new implementation
     k_sleep(BEEP_DURATION);
-
-    pwm_pin_set_usec(pwm, BUZZ_CHANNEL, 0, 0, BUZZ_FLAGS);
+    pwm_set_dt(&pwm, 0, 0); // attempt at new implementation
     k_sleep(K_MSEC(50));
-
 }
 
-void play_sound_1(const struct device *pwm)
-{
-    _play(pwm, 1000);
-    _play(pwm, 500);
-    _play(pwm, 250);
-    _play(pwm, 100);
-    _play(pwm, 50);
+static void play_sound_ble_0() {
+    _play(1000000);
+    _play(500000);
+    _play(250000);
+    _play(100000);
+    _play(50000);
 }
 
-void play_sound_2(const struct device *pwm)
-{
-    _play(pwm, 1500);
-    _play(pwm, 3900);
-    _play(pwm, 1500);
-    _play(pwm, 1500);
+static void play_sound_ble_1() {
+    _play(1500000);
+    _play(3900000);
+    _play(1500000);
+    _play(1500000);
 }
 
-void play_sound_3(const struct device *pwm)
-{
-    _play(pwm, 1500);
-    _play(pwm, 3900);
+static void play_sound_ble_2() {
+    _play(1500000);
+    _play(3900000);
 }
 
-void play_sound_4(const struct device *pwm)
-{
-    _play(pwm, 2000);
-    _play(pwm, 3900);
+static void play_sound_ble_3() {
+    _play(2000000);
+    _play(3900000);
 }
 
-void play_sound_5(const struct device *pwm)
-{
-    _play(pwm, 2500);
-    _play(pwm, 3900);
+static void play_sound_ble_4() {
+    _play(2500000);
+    _play(3900000);
 }
 
-int buzzer_listener(const zmk_event_t *eh)
-{
+static void play_sound_usb() {
+    _play(3000000);
+    _play(1500000);
+    _play(750000);
+}
 
-    const struct zmk_ble_active_profile_changed *profile_ev = NULL;
-    const struct device *pwm;
-
-    if ((profile_ev = as_zmk_ble_active_profile_changed(eh)) == NULL) {
-        return ZMK_EV_EVENT_BUBBLE;
+static void play_sound(uint8_t index) {
+    switch (index) {
+    case 0:
+        play_sound_ble_0();
+        break;
+    case 1:
+        play_sound_ble_1();
+        break;
+    case 2:
+        play_sound_ble_2();
+        break;
+    case 3:
+        play_sound_ble_3();
+        break;
+    case 4:
+        play_sound_ble_4();
+        break;
+    case 5:
+        play_sound_usb();
+        break;
+    default:
+        break;
     }
+}
 
-    pwm = device_get_binding(BUZZ_LABEL);
-    if (NULL == pwm) {
-        return ZMK_EV_EVENT_BUBBLE;
+int buzzer_listener(const zmk_event_t *eh) {
+    static int index = -1;
+    int new_index = -1;
+    switch (zmk_endpoints_selected().transport) {
+    case ZMK_TRANSPORT_USB:
+        new_index = 5;
+        break;
+    case ZMK_TRANSPORT_BLE:
+        new_index = zmk_ble_active_profile_index();
+        break;
     }
-
-    switch(profile_ev->index) {
-        case 0:
-            play_sound_1(pwm);
-            break;
-        case 1:
-            play_sound_2(pwm);
-            break;
-        case 2:
-            play_sound_3(pwm);
-            break;
-        case 3:
-            play_sound_4(pwm);
-            break;
-        case 4:
-            play_sound_5(pwm);
-            break;
-        default:
-            break;
+    if (new_index != index) {
+        play_sound(new_index);
+        index = new_index;
     }
     return ZMK_EV_EVENT_BUBBLE;
 }
 
 ZMK_LISTENER(buzzer_output_status, buzzer_listener)
-#if defined(CONFIG_ZMK_BLE)
-    ZMK_SUBSCRIPTION(buzzer_output_status, zmk_ble_active_profile_changed);
-#endif
+ZMK_SUBSCRIPTION(buzzer_output_status, zmk_ble_active_profile_changed);
+ZMK_SUBSCRIPTION(buzzer_output_status, zmk_endpoint_changed);
