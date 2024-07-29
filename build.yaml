@@ -6,5 +6,6 @@
 #
 ---
 include:
+  - board: cyber60_rev_d
   - board: kbdfans_tofu60_v2
   - board: bt60
