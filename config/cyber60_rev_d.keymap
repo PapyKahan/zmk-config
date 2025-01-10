@@ -67,5 +67,6 @@
 	&none       &none           &none           &none           &none           &none       &none           &none       &none                       &sys_reset
 	&kp C_PP
 			>;
+        };
 	};
 };
