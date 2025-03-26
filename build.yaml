@@ -7,5 +7,8 @@
 ---
 include:
   - board: cyber60_rev_d
+    snippet: studio-rpc-usb-uart
+    cmake-args: -DCONFIG_ZMK_STUDIO=y
   - board: kbdfans_tofu60_v2
   - board: bt60
+

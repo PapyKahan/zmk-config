@@ -7,9 +7,6 @@ CONFIG_BOARD_CYBER60_REV_D=y
 # Enable MPU
 CONFIG_ARM_MPU=y
 
-# enable pinctrl
-CONFIG_PINCTRL=y
-
 # enable GPIO
 CONFIG_GPIO=y
 
@@ -36,15 +33,20 @@ CONFIG_WS2812_STRIP=y
 CONFIG_ZMK_RGB_UNDERGLOW_EXT_POWER=y
 CONFIG_ZMK_RGB_UNDERGLOW_ON_START=n
 
-CONFIG_ZMK_USB=y
-CONFIG_ZMK_BLE=y
+# Enable the rotary encoder
+CONFIG_EC11=y
+CONFIG_EC11_TRIGGER_GLOBAL_THREAD=y
 
-# if NKRO and MAX_USAGE > 0x67, it should be increased.
-# probably it's caluculated from (MAX_USAGE + 1) / 8 + 3
-#  - report id 1byte
-#  - modifier input 1byte
-#  - reserved inout 1byte
-#  - nkro input (MAX_USAGE + 1) / 8 bytes
-# default: 16
-# nrf seem to msut be power of 2
-CONFIG_HID_INTERRUPT_EP_MPS=32
+# Enable sleep
+CONFIG_ZMK_SLEEP=n
+# CONFIG_ZMK_IDLE_SLEEP_TIMEOUT=120000
+
+# enable pinctrl
+CONFIG_PINCTRL=y
+
+# Turn on logging, and set ZMK logging to debug output
+# CONFIG_LOG_PROCESS_THREAD_STARTUP_DELAY_MS=8000
+# CONFIG_ZMK_USB_LOGGING=y
+
+CONFIG_ZMK_STUDIO=y
+CONFIG_ZMK_STUDIO_LOCKING=n
