@@ -3,7 +3,6 @@
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
-#include <dt-bindings/zmk/rgb.h>
 
 #define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
 
@@ -13,23 +12,9 @@
 #define ALTERNATIVE     1
 #define RAISE           2
 #define CONFIGURATION   3
+#define UNDERGLOW       4
 
 / {
-    behaviors {
-        td0: tap_dance_0 {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp LGUI>, <&kp RG(RIGHT_ALT)>;
-        };
-        kt_on: key_toggle_on_only {
-            compatible = "zmk,behavior-key-toggle";
-            #binding-cells = <1>;
-            display-name = "Key Toggle On";
-            toggle-mode = "on";
-        };
-    };
-
 	keymap {
 		compatible = "zmk,keymap";
 
@@ -92,18 +77,36 @@
 
 		configuration {
 // ------------------------------------------------------------------------------------------
-// | BT_CLR | BT 0 | BT 1 | BT 3 | BT 4 |     |     |     |     |     | MUTE | VOL_DN | VOL_UP |      
+// | BT_CLR | BT 0 | BT 1 | BT 2 | BT 3 | BT 4 |     |     |     |     | MUTE | VOL_DN | VOL_UP |      
 // |    |      |     |     |     |     |     | USB_OUT |     |     |      | BL_INC | BL_DEC |  BL_TOG  |
 // |     |        |      |       |     |     |     |     |     |     |     |      | BOOTLOADER
 // |          |      |      |      |        | BT_OUT |      |      |      |      |       |            
 // |        |       |       |                               |     |     |           | RESET
 // ------------------------------------------------------------------------------------------
 			bindings = <
-	&none               &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &none       &none           &none           &none                       &none           &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &bt BT_CLR  &bt BT_CLR
-	&none               &mkp MB1            &mmv MOVE_UP    &mkp MB2        &none           &none       &none           &out OUT_USB    &none                       &rgb_ug RGB_EFF &rgb_ug RGB_HUD &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_TOG
-	&studio_unlock      &mmv MOVE_LEFT      &mmv MOVE_DOWN  &mmv MOVE_RIGHT &none           &none       &none           &kp C_NEXT      &kp C_PREV                  &none           &none           &none           &rgb_ug RGB_SAI &bootloader
-	&none               &none               &none           &none           &none           &none       &out OUT_BLE    &none           &none                       &kp C_BRI_DEC   &kp C_BRI_INC   &rgb_ug RGB_SAD &none           &none
+	&mo UNDERGLOW               &bt BT_SEL 0        &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3    &none       &none           &none           &none                       &none           &kp C_MUTE      &kp C_VOL_DN    &kp C_VOL_UP    &bt BT_CLR  &bt BT_CLR
+	&none               &mkp MB1            &mmv MOVE_UP    &mkp MB2        &none           &none       &none           &out OUT_USB    &none                       &none &none &none &none &none
+	&studio_unlock      &mmv MOVE_LEFT      &mmv MOVE_DOWN  &mmv MOVE_RIGHT &none           &none       &none           &kp C_NEXT      &kp C_PREV                  &none           &none           &none           &none &bootloader
+	&none               &none               &none           &none           &none           &none       &out OUT_BLE    &none           &none                       &kp C_BRI_DEC   &kp C_BRI_INC   &none &none           &none
 	&none               &tog ALTERNATIVE    &none           &none           &none           &none       &none           &none           &none                       &sys_reset
+	&trans
+			>;
+        };
+
+		underglow {
+// ------------------------------------------------------------------------------------------
+// |     |      |      |      |      |     |     |     |     |     |      |       |       |      
+// |    |      |     |     |     |     |     |       |     |     |      | BL_INC | BL_DEC |  BL_TOG  |
+// |     |        |      |       |     |     |     |     |     |     |     |      |      
+// |          |      |      |      |        |       |      |      |      |      |       |            
+// |        |       |       |                               |     |     |           |      
+// ------------------------------------------------------------------------------------------
+			bindings = <
+	&none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &rgb_ug RGB_EFR &rgb_ug RGB_EFF &none   &none
+	&none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &rgb_ug RGB_BRD &rgb_ug RGB_BRI &rgb_ug RGB_TOG
+	&none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &rgb_ug RGB_HUD &rgb_ug RGB_HUI &none
+	&none   &none   &none   &none   &none   &none   &none   &none   &none   &none   &rgb_ug RGB_SAD &rgb_ug RGB_SAI &none   &none
+	&none   &none   &none   &none   &none   &none   &none   &none   &none   &none
 	&trans
 			>;
         };
