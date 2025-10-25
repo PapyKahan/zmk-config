@@ -1,16 +1,16 @@
 # Cyber60 Keyboard Keybinding Schema
 
-This document provides a comprehensive analysis of the Cyber60 Rev D keyboard keybinding structure with visual SVG diagrams.
+This document provides a comprehensive analysis of the Cyber60 Rev D keyboard keybinding structure with dark theme SVG diagrams matching the actual keyboard aesthetic.
 
 ## Overview
 
-The Cyber60 keyboard features a sophisticated 5-layer system with custom behaviors, momentary layers, and special functions. This documentation visualizes the keybinding architecture for easier understanding and reference.
+The Cyber60 keyboard features a sophisticated 5-layer system with custom behaviors, momentary layers, and special functions. This documentation visualizes the keybinding architecture with a dark theme that matches the actual keyboard's appearance.
 
 ## Layer System Architecture
 
-![Layer Navigation Diagram](svg/layer-navigation-pro.svg)
+![Layer Navigation Diagram](svg/layer-navigation-dark.svg)
 
-The keyboard features 5 distinct layers:
+The keyboard features 5 distinct layers with a dark theme design:
 
 ### Layer Navigation Flow
 
@@ -28,17 +28,17 @@ The keyboard features 5 distinct layers:
 
 ### DEFAULT Layer (0) - Base QWERTY
 
-![DEFAULT Layer](svg/default-layer-pro.svg)
+![DEFAULT Layer](svg/default-layer-dark.svg)
 
 **Features:**
-- Standard QWERTY typing layout
+- Standard QWERTY typing layout with dark theme keys
 - Tap dance Win key (single tap = Left GUI, double tap = Right GUI + Right Alt)
 - Rotary encoder: Volume up/down, Play/Pause click
 - Access to other layers via special keys
 
 **Key Highlights:**
-- **Context Menu** (green): Layer-tap to CONFIGURATION layer
-- **Right Alt** (orange): Momentary RAISE layer
+- **Context Menu** (orange): Layer-tap to CONFIGURATION layer
+- **Right Alt** (blue): Momentary RAISE layer
 - **Encoder**: Volume control and media playback
 
 ### ALTERNATIVE Layer (1) - Win+Alt Mode
@@ -50,12 +50,12 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 
 ### RAISE Layer (2) - Function & Media Controls
 
-![RAISE Layer](svg/raise-layer-pro.svg)
+![RAISE Layer](svg/raise-layer-dark.svg)
 
 **Key Groups:**
 - **Function Keys** (blue): F1-F12, Delete
 - **Navigation** (green): Arrow keys, Home, End, Page Up/Down
-- **Media** (orange): Insert, Print Screen
+- **Media** (yellow): Insert, Print Screen
 - **Mouse** (pink): Mouse buttons 4-5
 - **Transparent**: Pass-through to DEFAULT layer
 
@@ -66,12 +66,12 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 
 ### CONFIGURATION Layer (3) - System Controls
 
-![CONFIGURATION Layer](svg/config-layer-pro.svg)
+![CONFIGURATION Layer](svg/config-layer-dark.svg)
 
 **Key Groups:**
 - **Bluetooth** (blue): BT0-4 selection, Clear, Underglow access
 - **Mouse** (green): MB1, mouse movement controls, MB2
-- **Media** (orange): Mute, Volume, Next/Previous, Brightness
+- **Media** (yellow): Mute, Volume, Next/Previous, Brightness
 - **System** (red): USB/BLE output, Studio unlock, Bootloader, Reset
 - **Layer** (purple): Alternative layer toggle
 
@@ -86,11 +86,11 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 
 ### UNDERGLOW Layer (4) - RGB Controls
 
-![UNDERGLOW Layer](svg/rgb-layer-pro.svg)
+![UNDERGLOW Layer](svg/rgb-layer-dark.svg)
 
 **Key Groups:**
 - **Effect Control** (blue): Effect forward/reverse
-- **Brightness** (orange): Brightness down/up, toggle on/off
+- **Brightness** (yellow): Brightness down/up, toggle on/off
 - **Hue Control** (purple): Hue down/up adjustment
 - **Saturation Control** (red): Saturation down/up adjustment
 - **Transparent**: Pass-through to CONFIGURATION layer
@@ -126,6 +126,13 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 - **Pointing**: Mouse movement and button support
 - **Connectivity**: Bluetooth LE + USB with ZMK Studio
 
+### Dark Theme Design
+- **Background**: Dark (#1a1a1a) matching real keyboard
+- **Keys**: Dark gray with subtle borders
+- **Text**: White/light for high contrast
+- **Color coding**: Functional groups with distinct colors
+- **Encoder**: Positioned on right side as in actual layout
+
 ### Layer Access Summary
 | Layer | Access Method | Key | Behavior |
 |-------|----------------|-----|----------|
@@ -156,6 +163,15 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 4. **Mouse Control**: Use CONFIGURATION layer for mouse movement and RAISE layer for mouse buttons 4-5
 5. **Firmware Updates**: Use BOOT key in CONFIGURATION layer to enter bootloader mode
 
-This documentation provides a comprehensive overview of the Cyber60 keyboard's keybinding structure, showing how the layers interact and the special behaviors configured in the ZMK firmware.
+## Visual Design
+
+All SVG diagrams follow a consistent dark theme that matches the actual keyboard:
+- **Dark background** with high contrast text
+- **Accurate 60% keyboard layout** with proper key positioning
+- **Realistic key styling** with subtle borders and rounded corners
+- **Color-coded functional groups** for easy identification
+- **Encoder position** matching the actual hardware layout
+
+This documentation provides a comprehensive overview of the Cyber60 keyboard's keybinding structure, showing how the layers interact and the special behaviors configured in the ZMK firmware, with visual representations that accurately match the real keyboard's appearance.
 
 Generated from ZMK configuration analysis.

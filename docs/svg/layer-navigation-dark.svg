@@ -3,11 +3,10 @@
   <defs>
     <style>
       .layer-box {
-        fill: #ffffff;
-        stroke: #333333;
+        fill: #2d2d2d;
+        stroke: #4a4a4a;
         stroke-width: 2;
         rx: 8;
-        filter: drop-shadow(0 2px 4px rgba(0,0,0,0.1));
       }
       .layer-title {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
@@ -15,18 +14,19 @@
         font-weight: 600;
         text-anchor: middle;
         dominant-baseline: middle;
+        fill: #ffffff;
       }
       .layer-subtitle {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size: 11px;
-        fill: #6b7280;
+        fill: #9ca3af;
         text-anchor: middle;
         dominant-baseline: middle;
       }
       .feature-text {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size: 10px;
-        fill: #374151;
+        fill: #d1d5db;
         dominant-baseline: middle;
       }
       .arrow {
@@ -50,13 +50,13 @@
         stroke-dasharray: 8,4;
       }
       .arrow-tap {
-        stroke: #8b5cf6;
+        stroke: #a855f7;
         stroke-width: 2;
         fill: none;
         marker-end: url(#arrowhead-purple);
       }
       .arrow-return {
-        stroke: #9ca3af;
+        stroke: #6b7280;
         stroke-width: 1;
         fill: none;
         stroke-dasharray: 3,2;
@@ -66,7 +66,7 @@
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size: 9px;
         font-weight: 500;
-        fill: #1f2937;
+        fill: #d1d5db;
         text-anchor: middle;
       }
       .main-title {
@@ -74,11 +74,11 @@
         font-size: 24px;
         font-weight: 700;
         text-anchor: middle;
-        fill: #1f2937;
+        fill: #ffffff;
       }
       .features-box {
-        fill: #f8fafc;
-        stroke: #cbd5e1;
+        fill: #374151;
+        stroke: #4b5563;
         stroke-width: 1;
         rx: 8;
       }
@@ -86,18 +86,18 @@
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size: 14px;
         font-weight: 600;
-        fill: #1f2937;
+        fill: #ffffff;
       }
       .legend-box {
-        fill: #f1f5f9;
-        stroke: #cbd5e1;
+        fill: #1f2937;
+        stroke: #4b5563;
         stroke-width: 1;
         rx: 6;
       }
       .legend-text {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size: 10px;
-        fill: #475569;
+        fill: #9ca3af;
       }
     </style>
 
@@ -112,44 +112,47 @@
       <path d="M0,0 L0,6 L9,3 z" fill="#10b981"/>
     </marker>
     <marker id="arrowhead-purple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
-      <path d="M0,0 L0,6 L9,3 z" fill="#8b5cf6"/>
+      <path d="M0,0 L0,6 L9,3 z" fill="#a855f7"/>
     </marker>
   </defs>
+
+  <!-- Dark background -->
+  <rect width="900" height="500" fill="#1a1a1a"/>
 
   <!-- Title -->
   <text x="450" y="35" class="main-title">Cyber60 Keyboard Layer Navigation System</text>
 
   <!-- DEFAULT Layer -->
   <rect x="50" y="80" width="160" height="100" class="layer-box"/>
-  <text x="130" y="105" class="layer-title" fill="#2563eb">DEFAULT (0)</text>
+  <text x="130" y="105" class="layer-title">DEFAULT (0)</text>
   <text x="130" y="125" class="layer-subtitle">Base QWERTY</text>
   <text x="60" y="150" class="feature-text">• Standard typing</text>
   <text x="60" y="165" class="feature-text">• Tap dance Win key</text>
 
   <!-- RAISE Layer -->
   <rect x="50" y="250" width="160" height="100" class="layer-box"/>
-  <text x="130" y="275" class="layer-title" fill="#0ea5e9">RAISE (2)</text>
+  <text x="130" y="275" class="layer-title">RAISE (2)</text>
   <text x="130" y="295" class="layer-subtitle">Function & Media</text>
   <text x="60" y="320" class="feature-text">• F1-F12 keys</text>
   <text x="60" y="335" class="feature-text">• Navigation arrows</text>
 
   <!-- CONFIGURATION Layer -->
   <rect x="370" y="80" width="160" height="100" class="layer-box"/>
-  <text x="450" y="105" class="layer-title" fill="#7c3aed">CONFIG (3)</text>
+  <text x="450" y="105" class="layer-title">CONFIG (3)</text>
   <text x="450" y="125" class="layer-subtitle">System/Bluetooth</text>
   <text x="380" y="150" class="feature-text">• BT pairing</text>
   <text x="380" y="165" class="feature-text">• Mouse control</text>
 
   <!-- ALTERNATIVE Layer -->
   <rect x="690" y="80" width="160" height="100" class="layer-box"/>
-  <text x="770" y="105" class="layer-title" fill="#f59e0b">ALTERNATIVE (1)</text>
+  <text x="770" y="105" class="layer-title">ALTERNATIVE (1)</text>
   <text x="770" y="125" class="layer-subtitle">Win+Alt Mode</text>
   <text x="700" y="150" class="feature-text">• Same as DEFAULT</text>
   <text x="700" y="165" class="feature-text">• Modified Win key</text>
 
   <!-- UNDERGLOW Layer -->
   <rect x="370" y="250" width="160" height="100" class="layer-box"/>
-  <text x="450" y="275" class="layer-title" fill="#10b981">RGB (4)</text>
+  <text x="450" y="275" class="layer-title">RGB (4)</text>
   <text x="450" y="295" class="layer-subtitle">Underglow</text>
   <text x="380" y="320" class="feature-text">• RGB effects</text>
   <text x="380" y="335" class="feature-text">• Brightness/Hue</text>
@@ -157,23 +160,23 @@
   <!-- Navigation Arrows -->
   <!-- DEFAULT to RAISE (momentary via Right Alt) -->
   <path d="M 130 180 L 130 250" class="arrow-momentary"/>
-  <text x="155" y="220" class="key-label" fill="#f59e0b">Right Alt</text>
-  <text x="155" y="232" class="key-label" style="font-size: 8px; fill: #f59e0b;">(momentary)</text>
+  <text x="155" y="220" class="key-label">Right Alt</text>
+  <text x="155" y="232" class="key-label" style="font-size: 8px;">(momentary)</text>
 
   <!-- DEFAULT to CONFIGURATION (layer-tap via Context Menu) -->
   <path d="M 210 130 L 370 130" class="arrow-tap"/>
-  <text x="290" y="120" class="key-label" fill="#8b5cf6">Context Menu</text>
-  <text x="290" y="108" class="key-label" style="font-size: 8px; fill: #8b5cf6;">(layer-tap)</text>
+  <text x="290" y="120" class="key-label">Context Menu</text>
+  <text x="290" y="108" class="key-label" style="font-size: 8px;">(layer-tap)</text>
 
   <!-- CONFIGURATION to ALTERNATIVE (toggle) -->
   <path d="M 530 130 L 690 130" class="arrow-toggle"/>
-  <text x="610" y="120" class="key-label" fill="#10b981">Toggle ALT</text>
-  <text x="610" y="108" class="key-label" style="font-size: 8px; fill: #10b981;">(toggle)</text>
+  <text x="610" y="120" class="key-label">Toggle ALT</text>
+  <text x="610" y="108" class="key-label" style="font-size: 8px;">(toggle)</text>
 
   <!-- CONFIGURATION to UNDERGLOW (momentary) -->
   <path d="M 450 180 L 450 250" class="arrow-momentary"/>
-  <text x="475" y="220" class="key-label" fill="#f59e0b">RGB Key</text>
-  <text x="475" y="232" class="key-label" style="font-size: 8px; fill: #f59e0b;">(momentary)</text>
+  <text x="475" y="220" class="key-label">RGB Key</text>
+  <text x="475" y="232" class="key-label" style="font-size: 8px;">(momentary)</text>
 
   <!-- Return paths (dashed) -->
   <path d="M 110 250 L 110 180" class="arrow-return"/>
