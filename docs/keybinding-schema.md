@@ -8,7 +8,7 @@ The Cyber60 keyboard features a sophisticated 5-layer system with custom behavio
 
 ## Layer System Architecture
 
-![Layer Navigation Diagram](svg/layer-navigation.svg)
+![Layer Navigation Diagram](svg/layer-navigation-pro.svg)
 
 The keyboard features 5 distinct layers:
 
@@ -28,7 +28,7 @@ The keyboard features 5 distinct layers:
 
 ### DEFAULT Layer (0) - Base QWERTY
 
-![DEFAULT Layer](svg/default-layer.svg)
+![DEFAULT Layer](svg/default-layer-pro.svg)
 
 **Features:**
 - Standard QWERTY typing layout
@@ -50,7 +50,7 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 
 ### RAISE Layer (2) - Function & Media Controls
 
-![RAISE Layer](svg/raise-layer-simple.svg)
+![RAISE Layer](svg/raise-layer-pro.svg)
 
 **Key Groups:**
 - **Function Keys** (blue): F1-F12, Delete
@@ -66,7 +66,7 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 
 ### CONFIGURATION Layer (3) - System Controls
 
-![CONFIGURATION Layer](svg/config-layer-simple.svg)
+![CONFIGURATION Layer](svg/config-layer-pro.svg)
 
 **Key Groups:**
 - **Bluetooth** (blue): BT0-4 selection, Clear, Underglow access
@@ -86,7 +86,7 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 
 ### UNDERGLOW Layer (4) - RGB Controls
 
-![UNDERGLOW Layer](svg/rgb-layer-simple.svg)
+![UNDERGLOW Layer](svg/rgb-layer-pro.svg)
 
 **Key Groups:**
 - **Effect Control** (blue): Effect forward/reverse
