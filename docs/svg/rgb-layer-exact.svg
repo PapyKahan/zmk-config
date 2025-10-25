@@ -134,161 +134,149 @@
   <text x="657" y="77" class="key-text">—</text>
 
   <!-- Row 2: 14 keys -->
-  <rect x="40" y="100" width="52" height="35" class="key-transparent"/>
-  <text x="66" y="117" class="key-text">—</text>
+  <rect x="40" y="100" width="52.5" height="35" class="key-transparent"/>
+  <text x="66.25" y="117" class="key-text">—</text>
 
-  <rect x="97" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="114" y="117" class="key-text">—</text>
+  <rect x="97.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="114.5" y="117" class="key-text">—</text>
 
-  <rect x="137" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="154" y="117" class="key-text">—</text>
+  <rect x="137.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="154.5" y="117" class="key-text">—</text>
 
-  <rect x="177" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="194" y="117" class="key-text">—</text>
+  <rect x="177.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="194.5" y="117" class="key-text">—</text>
 
-  <rect x="217" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="234" y="117" class="key-text">—</text>
+  <rect x="217.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="234.5" y="117" class="key-text">—</text>
 
-  <rect x="257" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="274" y="117" class="key-text">—</text>
+  <rect x="257.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="274.5" y="117" class="key-text">—</text>
 
-  <rect x="297" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="314" y="117" class="key-text">—</text>
+  <rect x="297.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="314.5" y="117" class="key-text">—</text>
 
-  <rect x="337" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="354" y="117" class="key-text">—</text>
+  <rect x="337.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="354.5" y="117" class="key-text">—</text>
 
-  <rect x="377" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="394" y="117" class="key-text">—</text>
+  <rect x="377.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="394.5" y="117" class="key-text">—</text>
 
-  <rect x="417" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="434" y="117" class="key-text">—</text>
+  <rect x="417.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="434.5" y="117" class="key-text">—</text>
 
-  <rect x="457" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="474" y="117" class="key-text">—</text>
+  <rect x="457.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="474.5" y="117" class="key-text">—</text>
 
-  <rect x="497" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="514" y="117" class="key-text">—</text>
+  <rect x="497.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="514.5" y="117" class="key-text">—</text>
 
-  <rect x="537" y="100" width="35" height="35" class="key-transparent"/>
-  <text x="554" y="117" class="key-text">—</text>
+  <rect x="537.5" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="554.5" y="117" class="key-text">—</text>
 
-  <rect x="577" y="100" width="58" height="35" class="key-transparent"/>
-  <text x="606" y="117" class="key-text">—</text>
+  <rect x="577.5" y="100" width="52.5" height="35" class="key-transparent"/>
+  <text x="603.75" y="117" class="key-text">—</text>
 
   <!-- Row 3: 14 keys -->
-  <rect x="40" y="140" width="52" height="35" class="key-transparent"/>
-  <text x="66" y="157" class="key-text">—</text>
+  <rect x="40" y="140" width="61.25" height="35" class="key-transparent"/>
+  <text x="70.625" y="157" class="key-text">—</text>
 
-  <rect x="97" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="114" y="157" class="key-text">—</text>
+  <rect x="106.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="123.25" y="157" class="key-text">—</text>
 
-  <rect x="137" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="154" y="157" class="key-text">—</text>
+  <rect x="146.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="163.25" y="157" class="key-text">—</text>
 
-  <rect x="177" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="194" y="157" class="key-text">—</text>
+  <rect x="186.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="203.25" y="157" class="key-text">—</text>
 
-  <rect x="217" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="234" y="157" class="key-text">—</text>
+  <rect x="226.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="243.25" y="157" class="key-text">—</text>
 
-  <rect x="257" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="274" y="157" class="key-text">—</text>
+  <rect x="266.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="283.25" y="157" class="key-text">—</text>
 
-  <rect x="297" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="314" y="157" class="key-text">—</text>
+  <rect x="306.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="323.25" y="157" class="key-text">—</text>
 
-  <rect x="337" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="354" y="157" class="key-text">—</text>
+  <rect x="346.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="363.25" y="157" class="key-text">—</text>
 
-  <rect x="377" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="394" y="157" class="key-text">—</text>
+  <rect x="386.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="403.25" y="157" class="key-text">—</text>
 
-  <rect x="417" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="434" y="157" class="key-text">—</text>
+  <rect x="426.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="443.25" y="157" class="key-text">—</text>
 
-  <rect x="457" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="474" y="157" class="key-text">—</text>
+  <rect x="466.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="483.25" y="157" class="key-text">—</text>
 
-  <rect x="497" y="140" width="35" height="35" class="key-transparent"/>
-  <text x="514" y="157" class="key-text">—</text>
+  <rect x="506.25" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="523.25" y="157" class="key-text">—</text>
 
-  <rect x="537" y="140" width="93" height="35" class="key-transparent"/>
-  <text x="583" y="157" class="key-text">—</text>
+  <rect x="546.25" y="140" width="78.75" height="35" class="key-transparent"/>
+  <text x="585.625" y="157" class="key-text">—</text>
 
   <!-- Row 4: 14 keys -->
-  <rect x="40" y="180" width="70" height="35" class="key-transparent"/>
-  <text x="75" y="197" class="key-text">—</text>
+  <rect x="40" y="180" width="78.75" height="35" class="key-transparent"/>
+  <text x="79.375" y="197" class="key-text">—</text>
 
-  <rect x="115" y="180" width="70" height="35" class="key-transparent"/>
-  <text x="150" y="197" class="key-text">—</text>
+  <rect x="123.75" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="140.75" y="197" class="key-text">—</text>
 
-  <rect x="190" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="207" y="197" class="key-text">—</text>
+  <rect x="163.75" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="180.75" y="197" class="key-text">—</text>
 
-  <rect x="230" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="247" y="197" class="key-text">—</text>
+  <rect x="203.75" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="220.75" y="197" class="key-text">—</text>
 
-  <rect x="270" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="287" y="197" class="key-text">—</text>
+  <rect x="243.75" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="260.75" y="197" class="key-text">—</text>
 
-  <rect x="310" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="327" y="197" class="key-text">—</text>
+  <rect x="283.75" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="300.75" y="197" class="key-text">—</text>
 
-  <rect x="350" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="367" y="197" class="key-text">—</text>
+  <rect x="323.75" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="340.75" y="197" class="key-text">—</text>
 
-  <rect x="390" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="407" y="197" class="key-text">—</text>
+  <rect x="363.75" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="380.75" y="197" class="key-text">—</text>
 
-  <rect x="430" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="447" y="197" class="key-text">—</text>
+  <rect x="403.75" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="420.75" y="197" class="key-text">—</text>
 
-  <rect x="470" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="487" y="197" class="key-text">—</text>
+  <rect x="443.75" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="460.75" y="197" class="key-text">—</text>
 
-  <rect x="510" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="527" y="197" class="key-text">—</text>
+  <rect x="483.75" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="500.75" y="197" class="key-text">—</text>
 
-  <rect x="550" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="567" y="197" class="key-text">—</text>
+  <rect x="523.75" y="180" width="96.25" height="35" class="key-transparent"/>
+  <text x="571.875" y="197" class="key-text">—</text>
 
-  <rect x="590" y="180" width="75" height="35" class="key-saturation"/>
-  <text x="627" y="197" class="key-text">SAT</text>
-
-  <rect x="670" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="687" y="197" class="key-text">—</text>
-
-  <rect x="705" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="722" y="197" class="key-text">—</text>
-
-  <rect x="745" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="762" y="197" class="key-text">—</text>
-
-  <rect x="785" y="180" width="35" height="35" class="key-transparent"/>
-  <text x="802" y="197" class="key-text">—</text>
+  <rect x="625" y="180" width="40" height="35" class="key-saturation"/>
+  <text x="645" y="197" class="key-text">SAT</text>
 
   <!-- Row 5: 7 keys -->
-  <rect x="40" y="220" width="45" height="35" class="key-transparent"/>
-  <text x="62" y="237" class="key-text">—</text>
+  <rect x="40" y="220" width="43.75" height="35" class="key-transparent"/>
+  <text x="61.875" y="237" class="key-text">—</text>
 
-  <rect x="90" y="220" width="45" height="35" class="key-transparent"/>
-  <text x="112" y="237" class="key-text">—</text>
+  <rect x="88.75" y="220" width="43.75" height="35" class="key-transparent"/>
+  <text x="110.625" y="237" class="key-text">—</text>
 
-  <rect x="140" y="220" width="45" height="35" class="key-transparent"/>
-  <text x="162" y="237" class="key-text">—</text>
+  <rect x="137.5" y="220" width="43.75" height="35" class="key-transparent"/>
+  <text x="159.375" y="237" class="key-text">—</text>
 
-  <rect x="190" y="220" width="219" height="35" class="key-transparent"/>
-  <text x="299" y="237" class="key-text">—</text>
+  <rect x="186.25" y="220" width="218.75" height="35" class="key-transparent"/>
+  <text x="295.625" y="237" class="key-text">—</text>
 
-  <rect x="420" y="220" width="45" height="35" class="key-transparent"/>
-  <text x="442" y="237" class="key-text">—</text>
+  <rect x="410" y="220" width="43.75" height="35" class="key-transparent"/>
+  <text x="431.875" y="237" class="key-text">—</text>
 
-  <rect x="470" y="220" width="50" height="35" class="key-transparent"/>
-  <text x="495" y="237" class="key-text">—</text>
+  <rect x="458.75" y="220" width="43.75" height="35" class="key-transparent"/>
+  <text x="480.625" y="237" class="key-text">—</text>
 
-  <rect x="525" y="220" width="45" height="35" class="key-transparent"/>
-  <text x="547" y="237" class="key-text">—</text>
+  <rect x="507.5" y="220" width="43.75" height="35" class="key-transparent"/>
+  <text x="529.375" y="237" class="key-text">—</text>
 
   <!-- RGB Visualization -->
   <rect x="720" y="120" width="60" height="60" class="rgb-display"/>
