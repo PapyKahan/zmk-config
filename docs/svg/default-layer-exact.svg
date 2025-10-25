@@ -92,11 +92,8 @@
   <rect x="520" y="60" width="35" height="35" class="key"/>
   <text x="537" y="77" class="key-text">=</text>
 
-  <rect x="560" y="60" width="35" height="35" class="key"/>
-  <text x="577" y="77" class="key-text">⌫</text>
-
-  <rect x="600" y="60" width="35" height="35" class="key"/>
-  <text x="617" y="77" class="key-text">⌫</text>
+  <rect x="560" y="60" width="70" height="35" class="key"/>
+  <text x="595" y="77" class="key-text">⌫</text>
 
   <!-- Row 2: 14 keys -->
   <rect x="40" y="100" width="52" height="35" class="key"/>
@@ -178,11 +175,8 @@
   <rect x="497" y="140" width="35" height="35" class="key"/>
   <text x="514" y="157" class="key-text">'</text>
 
-  <rect x="537" y="140" width="35" height="35" class="key"/>
-  <text x="554" y="157" class="key-text">⏎</text>
-
-  <rect x="577" y="140" width="58" height="35" class="key"/>
-  <text x="606" y="157" class="key-text">⏎</text>
+  <rect x="537" y="140" width="93" height="35" class="key"/>
+  <text x="583" y="157" class="key-text">⏎</text>
 
   <!-- Row 4: 14 keys -->
   <rect x="40" y="180" width="70" height="35" class="key"/>
@@ -218,11 +212,8 @@
   <rect x="475" y="180" width="35" height="35" class="key"/>
   <text x="492" y="197" class="key-text">/</text>
 
-  <rect x="515" y="180" width="35" height="35" class="key"/>
-  <text x="532" y="197" class="key-text">⇧</text>
-
-  <rect x="555" y="180" width="35" height="35" class="key"/>
-  <text x="572" y="197" class="key-text">⇧</text>
+  <rect x="515" y="180" width="75" height="35" class="key"/>
+  <text x="552" y="197" class="key-text">⇧</text>
 
   <rect x="595" y="180" width="40" height="35" class="key-layer"/>
   <text x="615" y="197" class="key-text">⚙</text>
@@ -237,8 +228,8 @@
   <rect x="140" y="220" width="45" height="35" class="key"/>
   <text x="162" y="237" class="key-text">⌥</text>
 
-  <rect x="190" y="220" width="225" height="35" class="key"/>
-  <text x="302" y="237" class="key-text">SPACE</text>
+  <rect x="190" y="220" width="219" height="35" class="key"/>
+  <text x="299" y="237" class="key-text">SPACE</text>
 
   <rect x="420" y="220" width="45" height="35" class="key"/>
   <text x="442" y="237" class="key-text">⌥</text>
