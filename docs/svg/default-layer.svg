@@ -1,58 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
-  <defs>
-    <style>
-      .key {
-        fill: #ffffff;
-        stroke: #333333;
-        stroke-width: 1.5;
-        rx: 4;
-      }
-      .key-text {
-        font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
-        font-size: 10px;
-        font-weight: 600;
-        fill: #1a1a1a;
-        text-anchor: middle;
-        dominant-baseline: middle;
-      }
-      .key-1u { width: 36px; height: 36px; }
-      .key-1u-5 { width: 54px; height: 36px; }
-      .key-2u { width: 72px; height: 36px; }
-      .key-2u-25 { width: 81px; height: 36px; }
-      .key-6u { width: 216px; height: 36px; }
-      .key-2u-5 { width: 90px; height: 36px; }
-      .layer-title {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-        font-size: 18px;
-        font-weight: 700;
-        fill: #1976d2;
-      }
-      .layer-subtitle {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-        font-size: 12px;
-        fill: #666666;
-      }
-      .encoder {
-        fill: #e3f2fd;
-        stroke: #1976d2;
-        stroke-width: 2;
-        stroke-dasharray: 3,2;
-      }
-      .encoder-text {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-        font-size: 8px;
-        fill: #1976d2;
-        text-anchor: middle;
-      }
-    </style>
-  </defs>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <style>
+    .key { fill: white; stroke: black; stroke-width: 1.5; }
+    .key-text { font-family: Arial, sans-serif; font-size: 10px; text-anchor: middle; dominant-baseline: middle; }
+    .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #1976d2; }
+    .subtitle { font-family: Arial, sans-serif; font-size: 12px; fill: #666; }
+    .special { fill: #e8f5e8; }
+    .layer-key { fill: #fff3e0; }
+    .encoder { fill: #e3f2fd; stroke: #1976d2; stroke-width: 2; stroke-dasharray: 3,2; }
+  </style>
 
   <!-- Title -->
-  <text x="10" y="25" class="layer-title">DEFAULT LAYER (0)</text>
-  <text x="10" y="42" class="layer-subtitle">Base QWERTY Layout</text>
+  <text x="10" y="25" class="title">DEFAULT LAYER (0)</text>
+  <text x="10" y="42" class="subtitle">Base QWERTY Layout</text>
 
-  <!-- Row 1: ESC, 1-9, 0, -, =, Backspace×2 -->
+  <!-- Row 1 -->
   <rect x="10" y="60" width="36" height="36" class="key"/>
   <text x="28" y="78" class="key-text">ESC</text>
 
@@ -98,7 +60,7 @@
   <rect x="598" y="60" width="36" height="36" class="key"/>
   <text x="616" y="78" class="key-text">←</text>
 
-  <!-- Row 2: TAB, Q-P, [, ], \ -->
+  <!-- Row 2 -->
   <rect x="10" y="102" width="54" height="36" class="key"/>
   <text x="37" y="120" class="key-text">TAB</text>
 
@@ -141,7 +103,7 @@
   <rect x="574" y="102" width="60" height="36" class="key"/>
   <text x="604" y="120" class="key-text">\</text>
 
-  <!-- Row 3: GRAVE, A-L, ;, ', Enter×2 -->
+  <!-- Row 3 -->
   <rect x="10" y="144" width="54" height="36" class="key"/>
   <text x="37" y="162" class="key-text">`</text>
 
@@ -184,7 +146,7 @@
   <rect x="574" y="144" width="60" height="36" class="key"/>
   <text x="604" y="162" class="key-text">⏎</text>
 
-  <!-- Row 4: Shift×2, Z-/, Shift, CONFIG -->
+  <!-- Row 4 -->
   <rect x="10" y="186" width="54" height="36" class="key"/>
   <text x="37" y="204" class="key-text">⇧</text>
 
@@ -224,11 +186,10 @@
   <rect x="550" y="186" width="54" height="36" class="key"/>
   <text x="577" y="204" class="key-text">⇧</text>
 
-  <rect x="610" y="186" width="54" height="36" key style="fill: #e8f5e8;"/>
+  <rect x="610" y="186" width="54" height="36" class="special"/>
   <text x="637" y="204" class="key-text">⚙</text>
-  <text x="637" y="215" class="key-text" style="font-size: 7px;">CONFIG</text>
 
-  <!-- Row 5: Ctrl, Win, Alt, Space×4, Alt, Raise, Ctrl -->
+  <!-- Row 5 -->
   <rect x="10" y="228" width="48" height="36" class="key"/>
   <text x="34" y="246" class="key-text">⌃</text>
 
@@ -238,43 +199,22 @@
   <rect x="114" y="228" width="48" height="36" class="key"/>
   <text x="138" y="246" class="key-text">⌥</text>
 
-  <rect x="166" y="228" width="54" height="36" class="key"/>
-  <text x="193" y="246" class="key-text">SPACE</text>
-
-  <rect x="224" y="228" width="54" height="36" class="key"/>
-  <text x="251" y="246" class="key-text">SPACE</text>
-
-  <rect x="282" y="228" width="54" height="36" class="key"/>
-  <text x="309" y="246" class="key-text">SPACE</text>
-
-  <rect x="340" y="228" width="54" height="36" class="key"/>
-  <text x="367" y="246" class="key-text">SPACE</text>
+  <rect x="166" y="228" width="216" height="36" class="key"/>
+  <text x="274" y="246" class="key-text">SPACE</text>
 
   <rect x="398" y="228" width="48" height="36" class="key"/>
   <text x="422" y="246" class="key-text">⌥</text>
 
-  <rect x="450" y="228" width="54" height="36" key style="fill: #fff3e0;"/>
+  <rect x="450" y="228" width="54" height="36" class="layer-key"/>
   <text x="477" y="246" class="key-text">RAISE</text>
 
   <rect x="508" y="228" width="48" height="36" class="key"/>
   <text x="532" y="246" class="key-text">⌃</text>
 
-  <!-- Encoder indicator -->
+  <!-- Encoder -->
   <circle cx="680" cy="150" r="25" class="encoder"/>
-  <text x="680" y="150" class="encoder-text">ENC</text>
-  <text x="680" y="160" class="encoder-text" style="font-size: 7px;">⏯</text>
-  <text x="680" y="120" class="encoder-text" style="font-size: 7px;">VOL↑</text>
-  <text x="680" y="180" class="encoder-text" style="font-size: 7px;">VOL↓</text>
+  <text x="680" y="150" class="key-text">ENC</text>
 
   <!-- Legend -->
-  <g transform="translate(10, 280)">
-    <rect x="0" y="0" width="12" height="12" style="fill: #e8f5e8; stroke: #333; stroke-width: 1;"/>
-    <text x="16" y="10" style="font-size: 10px; fill: #666;">Layer-tap key (CONFIG on tap)</text>
-
-    <rect x="180" y="0" width="12" height="12" style="fill: #fff3e0; stroke: #333; stroke-width: 1;"/>
-    <text x="196" y="10" style="font-size: 10px; fill: #666;">Momentary layer (RAISE on hold)</text>
-
-    <circle cx="360" cy="6" r="6" style="fill: #e3f2fd; stroke: #1976d2; stroke-width: 1; stroke-dasharray: 2,1;"/>
-    <text x="370" y="10" style="font-size: 10px; fill: #666;">Rotary encoder</text>
-  </g>
+  <text x="10" y="280" style="font-size: 10px; fill: #666;">Green: Layer-tap key (CONFIG on tap) | Orange: Momentary layer (RAISE on hold) | Circle: Rotary encoder</text>
 </svg>

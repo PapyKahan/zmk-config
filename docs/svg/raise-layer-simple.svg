@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300">
+  <style>
+    .key { fill: white; stroke: black; stroke-width: 1.5; }
+    .key-text { font-family: Arial, sans-serif; font-size: 9px; text-anchor: middle; dominant-baseline: middle; }
+    .title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; fill: #2196f3; }
+    .subtitle { font-family: Arial, sans-serif; font-size: 12px; fill: #666; }
+    .function { fill: #e3f2fd; }
+    .nav { fill: #e8f5e8; }
+    .media { fill: #fff3e0; }
+    .mouse { fill: #fce4ec; }
+    .transparent { fill: #f5f5f5; stroke: #999; stroke-dasharray: 2,2; }
+    .encoder { fill: #e3f2fd; stroke: #2196f3; stroke-width: 2; stroke-dasharray: 3,2; }
+  </style>
+
+  <!-- Title -->
+  <text x="10" y="25" class="title">RAISE LAYER (2)</text>
+  <text x="10" y="42" class="subtitle">Function Keys, Navigation & Media Controls</text>
+
+  <!-- Row 1: Transparent, F1-F12, Delete×2 -->
+  <rect x="10" y="60" width="36" height="36" class="transparent"/>
+  <text x="28" y="78" class="key-text" fill="#999">—</text>
+
+  <rect x="52" y="60" width="36" height="36" class="function"/>
+  <text x="70" y="78" class="key-text">F1</text>
+  <rect x="94" y="60" width="36" height="36" class="function"/>
+  <text x="112" y="78" class="key-text">F2</text>
+  <rect x="136" y="60" width="36" height="36" class="function"/>
+  <text x="154" y="78" class="key-text">F3</text>
+  <rect x="178" y="60" width="36" height="36" class="function"/>
+  <text x="196" y="78" class="key-text">F4</text>
+  <rect x="220" y="60" width="36" height="36" class="function"/>
+  <text x="238" y="78" class="key-text">F5</text>
+  <rect x="262" y="60" width="36" height="36" class="function"/>
+  <text x="280" y="78" class="key-text">F6</text>
+  <rect x="304" y="60" width="36" height="36" class="function"/>
+  <text x="322" y="78" class="key-text">F7</text>
+  <rect x="346" y="60" width="36" height="36" class="function"/>
+  <text x="364" y="78" class="key-text">F8</text>
+  <rect x="388" y="60" width="36" height="36" class="function"/>
+  <text x="406" y="78" class="key-text">F9</text>
+  <rect x="430" y="60" width="36" height="36" class="function"/>
+  <text x="448" y="78" class="key-text">F10</text>
+  <rect x="472" y="60" width="36" height="36" class="function"/>
+  <text x="490" y="78" class="key-text">F11</text>
+  <rect x="514" y="60" width="36" height="36" class="function"/>
+  <text x="532" y="78" class="key-text">F12</text>
+  <rect x="556" y="60" width="36" height="36" class="media"/>
+  <text x="574" y="78" class="key-text">DEL</text>
+  <rect x="598" y="60" width="36" height="36" class="media"/>
+  <text x="616" y="78" class="key-text">DEL</text>
+
+  <!-- Row 2: Navigation keys -->
+  <rect x="10" y="102" width="54" height="36" class="transparent"/>
+  <text x="37" y="120" class="key-text" fill="#999">—</text>
+  <rect x="70" y="102" width="36" height="36" class="nav"/>
+  <text x="88" y="120" class="key-text">HOME</text>
+  <rect x="112" y="102" width="36" height="36" class="nav"/>
+  <text x="130" y="120" class="key-text">↑</text>
+  <rect x="154" y="102" width="36" height="36" class="nav"/>
+  <text x="172" y="120" class="key-text">END</text>
+  <rect x="364" y="102" width="36" height="36" class="media"/>
+  <text x="382" y="120" class="key-text">INS</text>
+  <rect x="448" y="102" width="36" height="36" class="media"/>
+  <text x="466" y="120" class="key-text">PRT</text>
+
+  <!-- Row 3: Arrows and Page Up -->
+  <rect x="10" y="144" width="54" height="36" class="nav"/>
+  <text x="37" y="162" class="key-text">CAPS</text>
+  <rect x="70" y="144" width="36" height="36" class="nav"/>
+  <text x="88" y="162" class="key-text">←</text>
+  <rect x="112" y="144" width="36" height="36" class="nav"/>
+  <text x="130" y="162" class="key-text">↓</text>
+  <rect x="154" y="144" width="36" height="36" class="nav"/>
+  <text x="172" y="162" class="key-text">→</text>
+  <rect x="448" y="144" width="36" height="36" class="nav"/>
+  <text x="466" y="162" class="key-text">PG↑</text>
+
+  <!-- Row 4: Mouse buttons and Page Down -->
+  <rect x="70" y="186" width="54" height="36" class="mouse"/>
+  <text x="97" y="204" class="key-text">MB4</text>
+  <rect x="172" y="186" width="36" height="36" class="mouse"/>
+  <text x="190" y="204" class="key-text">MB5</text>
+  <rect x="508" y="186" width="36" height="36" class="nav"/>
+  <text x="526" y="204" class="key-text">PG↓</text>
+
+  <!-- Legend -->
+  <text x="10" y="280" style="font-size: 10px; fill: #666;">Blue: Function keys | Green: Navigation | Orange: Media | Pink: Mouse buttons | Gray: Transparent (pass-through)</text>
+</svg>

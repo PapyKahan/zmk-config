@@ -1,205 +1,83 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 600" width="1000" height="600">
-  <defs>
-    <style>
-      .layer-box {
-        fill: #ffffff;
-        stroke: #333333;
-        stroke-width: 2;
-        rx: 8;
-      }
-      .layer-title {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-        font-size: 16px;
-        font-weight: 700;
-        text-anchor: middle;
-      }
-      .layer-subtitle {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-        font-size: 11px;
-        fill: #666666;
-        text-anchor: middle;
-      }
-      .layer-content {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-        font-size: 10px;
-        fill: #333333;
-      }
-      .arrow {
-        stroke: #2196f3;
-        stroke-width: 2;
-        fill: none;
-        marker-end: url(#arrowhead);
-      }
-      .momentary-arrow {
-        stroke: #ff9800;
-        stroke-width: 2;
-        fill: none;
-        marker-end: url(#arrowhead-orange);
-        stroke-dasharray: 5,3;
-      }
-      .toggle-arrow {
-        stroke: #4caf50;
-        stroke-width: 2;
-        fill: none;
-        marker-end: url(#arrowhead-green);
-        stroke-dasharray: 8,4;
-      }
-      .tap-arrow {
-        stroke: #9c27b0;
-        stroke-width: 2;
-        fill: none;
-        marker-end: url(#arrowhead-purple);
-      }
-      .key-indicator {
-        font-family: 'SF Mono', monospace;
-        font-size: 9px;
-        font-weight: 600;
-        text-anchor: middle;
-      }
-      .legend-box {
-        fill: #f5f5f5;
-        stroke: #999;
-        stroke-width: 1;
-        rx: 4;
-      }
-      .legend-text {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-        font-size: 10px;
-        fill: #333333;
-      }
-      .feature-box {
-        fill: #e8f5e8;
-        stroke: #4caf50;
-        stroke-width: 1;
-        rx: 4;
-      }
-      .feature-title {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-        font-size: 12px;
-        font-weight: 600;
-        fill: #2e7d32;
-      }
-      .feature-text {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-        font-size: 9px;
-        fill: #333333;
-      }
-    </style>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <style>
+    .box { fill: white; stroke: black; stroke-width: 2; }
+    .title { font-family: Arial, sans-serif; font-size: 14px; font-weight: bold; text-anchor: middle; }
+    .subtitle { font-family: Arial, sans-serif; font-size: 10px; text-anchor: middle; fill: #666; }
+    .arrow { stroke: #2196f3; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .text { font-family: Arial, sans-serif; font-size: 10px; }
+    .main-title { font-family: Arial, sans-serif; font-size: 18px; font-weight: bold; text-anchor: middle; fill: #1976d2; }
+  </style>
 
-    <!-- Arrow markers -->
-    <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#2196f3"/>
-    </marker>
-    <marker id="arrowhead-orange" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#ff9800"/>
-    </marker>
-    <marker id="arrowhead-green" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#4caf50"/>
-    </marker>
-    <marker id="arrowhead-purple" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
-      <polygon points="0 0, 10 3.5, 0 7" fill="#9c27b0"/>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#2196f3"/>
     </marker>
   </defs>
 
   <!-- Title -->
-  <text x="500" y="30" style="font-size: 20px; font-weight: 700; text-anchor: middle; fill: #1976d2;">
-    Cyber60 Keyboard Layer Navigation System
-  </text>
+  <text x="400" y="30" class="main-title">Cyber60 Layer Navigation</text>
 
-  <!-- DEFAULT Layer (0) -->
-  <rect x="50" y="80" width="180" height="120" class="layer-box"/>
-  <text x="140" y="105" class="layer-title" fill="#1976d2">DEFAULT LAYER (0)</text>
-  <text x="140" y="122" class="layer-subtitle">Base QWERTY</text>
-  <text x="60" y="145" class="layer-content">• Standard typing</text>
-  <text x="60" y="160" class="layer-content">• Tap dance Win key</text>
-  <text x="60" y="175" class="layer-content">• Encoder: Volume/Play</text>
-  <text x="60" y="190" class="layer-content">• Access to other layers</text>
+  <!-- DEFAULT Layer -->
+  <rect x="50" y="60" width="140" height="80" class="box"/>
+  <text x="120" y="85" class="title" fill="#1976d2">DEFAULT (0)</text>
+  <text x="120" y="100" class="subtitle">Base QWERTY</text>
+  <text x="60" y="120" class="text">• Standard typing</text>
+  <text x="60" y="132" class="text">• Tap dance Win key</text>
 
-  <!-- RAISE Layer (2) -->
-  <rect x="50" y="250" width="180" height="120" class="layer-box"/>
-  <text x="140" y="275" class="layer-title" fill="#2196f3">RAISE LAYER (2)</text>
-  <text x="140" y="292" class="layer-subtitle">Function & Media</text>
-  <text x="60" y="315" class="layer-content">• F1-F12 keys</text>
-  <text x="60" y="330" class="layer-content">• Navigation arrows</text>
-  <text x="60" y="345" class="layer-content">• Mouse buttons 4-5</text>
-  <text x="60" y="360" class="layer-content">• Media controls</text>
+  <!-- RAISE Layer -->
+  <rect x="50" y="180" width="140" height="80" class="box"/>
+  <text x="120" y="205" class="title" fill="#2196f3">RAISE (2)</text>
+  <text x="120" y="220" class="subtitle">Function/Media</text>
+  <text x="60" y="240" class="text">• F1-F12 keys</text>
+  <text x="60" y="252" class="text">• Navigation arrows</text>
 
-  <!-- CONFIGURATION Layer (3) -->
-  <rect x="410" y="80" width="180" height="120" class="layer-box"/>
-  <text x="500" y="105" class="layer-title" fill="#9c27b0">CONFIGURATION (3)</text>
-  <text x="500" y="122" class="layer-subtitle">System & Bluetooth</text>
-  <text x="420" y="145" class="layer-content">• BT pairing (0-4)</text>
-  <text x="420" y="160" class="layer-content">• Mouse control</text>
-  <text x="420" y="175" class="layer-content">• USB/BLE output</text>
-  <text x="420" y="190" class="layer-content">• Bootloader/Reset</text>
+  <!-- CONFIGURATION Layer -->
+  <rect x="280" y="60" width="140" height="80" class="box"/>
+  <text x="350" y="85" class="title" fill="#9c27b0">CONFIG (3)</text>
+  <text x="350" y="100" class="subtitle">System/Bluetooth</text>
+  <text x="290" y="120" class="text">• BT pairing</text>
+  <text x="290" y="132" class="text">• Mouse control</text>
 
-  <!-- ALTERNATIVE Layer (1) -->
-  <rect x="770" y="80" width="180" height="120" class="layer-box"/>
-  <text x="860" y="105" class="layer-title" fill="#ff9800">ALTERNATIVE (1)</text>
-  <text x="860" y="122" class="layer-subtitle">Win+Alt Mode</text>
-  <text x="780" y="145" class="layer-content">• Same as DEFAULT</text>
-  <text x="780" y="160" class="layer-content">• Modified Win key</text>
-  <text x="780" y="175" class="layer-content">• Win+Right Alt</text>
-  <text x="780" y="190" class="layer-content">• For specific shortcuts</text>
+  <!-- ALTERNATIVE Layer -->
+  <rect x="510" y="60" width="140" height="80" class="box"/>
+  <text x="580" y="85" class="title" fill="#ff9800">ALT (1)</text>
+  <text x="580" y="100" class="subtitle">Win+Alt Mode</text>
+  <text x="520" y="120" class="text">• Same as DEFAULT</text>
+  <text x="520" y="132" class="text">• Modified Win key</text>
 
-  <!-- UNDERGLOW Layer (4) -->
-  <rect x="410" y="250" width="180" height="120" class="layer-box"/>
-  <text x="500" y="275" class="layer-title" fill="#4caf50">UNDERGLOW (4)</text>
-  <text x="500" y="292" class="layer-subtitle">RGB Controls</text>
-  <text x="420" y="315" class="layer-content">• Effect forward/reverse</text>
-  <text x="420" y="330" class="layer-content">• Brightness control</text>
-  <text x="420" y="345" class="layer-content">• Hue adjustment</text>
-  <text x="420" y="360" class="layer-content">• Saturation control</text>
+  <!-- UNDERGLOW Layer -->
+  <rect x="280" y="180" width="140" height="80" class="box"/>
+  <text x="350" y="205" class="title" fill="#4caf50">RGB (4)</text>
+  <text x="350" y="220" class="subtitle">Underglow</text>
+  <text x="290" y="240" class="text">• RGB effects</text>
+  <text x="290" y="252" class="text">• Brightness/Hue</text>
 
-  <!-- Navigation Arrows -->
-  <!-- DEFAULT to RAISE (momentary via Right Alt) -->
-  <path d="M 140 200 L 140 250" class="momentary-arrow"/>
-  <text x="140" y="230" class="key-indicator" fill="#ff9800">Right Alt</text>
-  <text x="140" y="242" class="key-indicator" style="font-size: 8px; fill: #ff9800;">(momentary)</text>
+  <!-- Arrows -->
+  <!-- DEFAULT to RAISE -->
+  <path d="M 120 140 L 120 180" class="arrow"/>
+  <text x="130" y="165" class="text" fill="#ff9800">Right Alt (momentary)</text>
 
-  <!-- DEFAULT to CONFIGURATION (layer-tap via Context Menu) -->
-  <path d="M 230 140 L 410 140" class="tap-arrow"/>
-  <text x="320" y="135" class="key-indicator" fill="#9c27b0">Context Menu</text>
-  <text x="320" y="125" class="key-indicator" style="font-size: 8px; fill: #9c27b0;">(layer-tap)</text>
+  <!-- DEFAULT to CONFIG -->
+  <path d="M 190 100 L 280 100" class="arrow"/>
+  <text x="235" y="95" class="text" fill="#9c27b0">Context Menu (layer-tap)</text>
 
-  <!-- CONFIGURATION to ALTERNATIVE (toggle) -->
-  <path d="M 590 140 L 770 140" class="toggle-arrow"/>
-  <text x="680" y="135" class="key-indicator" fill="#4caf50">Toggle ALT</text>
-  <text x="680" y="125" class="key-indicator" style="font-size: 8px; fill: #4caf50;">(toggle)</text>
+  <!-- CONFIG to ALTERNATIVE -->
+  <path d="M 420 100 L 510 100" class="arrow"/>
+  <text x="465" y="95" class="text" fill="#4caf50">Toggle ALT</text>
 
-  <!-- CONFIGURATION to UNDERGLOW (momentary) -->
-  <path d="M 500 200 L 500 250" class="momentary-arrow"/>
-  <text x="500" y="230" class="key-indicator" fill="#ff9800">RGB Key</text>
-  <text x="500" y="242" class="key-indicator" style="font-size: 8px; fill: #ff9800;">(momentary)</text>
+  <!-- CONFIG to UNDERGLOW -->
+  <path d="M 350 140 L 350 180" class="arrow"/>
+  <text x="360" y="165" class="text" fill="#ff9800">RGB Key (momentary)</text>
 
-  <!-- Return paths (dashed) -->
-  <path d="M 120 250 L 120 200" class="arrow" stroke-dasharray="3,2" opacity="0.5"/>
-  <path d="M 410 160 L 230 160" class="arrow" stroke-dasharray="3,2" opacity="0.5"/>
-  <path d="M 770 160 L 590 160" class="arrow" stroke-dasharray="3,2" opacity="0.5"/>
-  <path d="M 480 250 L 480 200" class="arrow" stroke-dasharray="3,2" opacity="0.5"/>
+  <!-- Return arrows (dashed) -->
+  <path d="M 350 260 L 350 300 L 120 300 L 120 260" stroke="#999" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 280 160 L 250 160 L 250 120 L 280 120" stroke="#999" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+  <path d="M 510 120 L 480 120 L 480 160 L 450 160" stroke="#999" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
 
-  <!-- Special Features Box -->
-  <rect x="50" y="420" width="900" height="140" class="feature-box"/>
-  <text x="500" y="445" class="feature-title">Special Features & Behaviors</text>
-
-  <text x="70" y="470" class="feature-text"><tspan x="70" dy="0">🎯 Tap Dance (td0):</tspan><tspan x="150" dy="0">Single tap = Left GUI, Double tap = Right GUI + Right Alt</tspan></text>
-  <text x="70" y="490" class="feature-text"><tspan x="70" dy="0">🎚️ Rotary Encoder:</tspan><tspan x="150" dy="0">Volume up/down (rotation), Play/Pause (click)</tspan></text>
-  <text x="70" y="510" class="feature-text"><tspan x="70" dy="0">🖱️ Pointing Device:</tspan><tspan x="150" dy="0">Enhanced movement speed (1500 vs default 600)</tspan></text>
-  <text x="70" y="530" class="feature-text"><tspan x="70" dy="0">🎨 RGB Underglow:</tspan><tspan x="150" dy="0">16 WS2812 LEDs with SPI3 control</tspan></text>
-  <text x="70" y="550" class="feature-text"><tspan x="70" dy="0">🛠️ ZMK Studio:</tspan><tspan x="150" dy="0">Runtime configuration via studio_unlock</tspan></text>
-
-  <!-- Legend -->
-  <rect x="770" y="270" width="180" height="90" class="legend-box"/>
-  <text x="860" y="290" style="font-size: 12px; font-weight: 600; text-anchor: middle;">Navigation Types</text>
-
-  <line x1="780" y1="305" x2="810" y2="305" class="momentary-arrow"/>
-  <text x="815" y="310" class="legend-text">Momentary layer</text>
-
-  <line x1="780" y1="325" x2="810" y2="325" class="toggle-arrow"/>
-  <text x="815" y="330" class="legend-text">Toggle layer</text>
-
-  <line x1="780" y1="345" x2="810" y2="345" class="tap-arrow"/>
-  <text x="815" y="350" class="legend-text">Layer-tap key</text>
-
+  <!-- Special Features -->
+  <rect x="50" y="320" width="600" height="60" fill="#f5f5f5" stroke="#999" stroke-width="1"/>
+  <text x="60" y="340" class="text" style="font-weight: bold;">Special Features:</text>
+  <text x="60" y="355" class="text">🎯 Tap Dance: Single=Left GUI, Double=Right GUI+Right Alt</text>
+  <text x="60" y="370" class="text">🎚️ Encoder: Volume up/down, Play/Pause click | 🖱️ Pointing: Enhanced movement (1500 vs 600)</text>
 </svg>

@@ -1,6 +1,6 @@
 # Cyber60 Keyboard Keybinding Schema
 
-This document provides a comprehensive analysis of the Cyber60 Rev D keyboard keybinding structure using Mermaid diagrams.
+This document provides a comprehensive analysis of the Cyber60 Rev D keyboard keybinding structure with visual SVG diagrams.
 
 ## Overview
 
@@ -8,221 +8,153 @@ The Cyber60 keyboard features a sophisticated 5-layer system with custom behavio
 
 ## Layer System Architecture
 
-```mermaid
-graph TB
-    %% Layer System Overview
-    subgraph "Layer Hierarchy"
-        DEFAULT[DEFAULT Layer 0<br/>Base QWERTY]
-        ALTERNATIVE[ALTERNATIVE Layer 1<br/>Win+Alt Mode]
-        RAISE[RAISE Layer 2<br/>Function/Media]
-        CONFIGURATION[CONFIGURATION Layer 3<br/>System/Bluetooth]
-        UNDERGLOW[UNDERGLOW Layer 4<br/>RGB Controls]
-    end
+![Layer Navigation Diagram](svg/layer-navigation.svg)
 
-    %% Layer Navigation
-    DEFAULT -->|mo RAISE (RAlt)| RAISE
-    DEFAULT -->|lt CONFIGURATION (Context Menu)| CONFIGURATION
-    CONFIGURATION -->|tog ALTERNATIVE| ALTERNATIVE
-    CONFIGURATION -->|mo UNDERGLOW| UNDERGLOW
+The keyboard features 5 distinct layers:
 
-    %% Special Behaviors
-    subgraph "Special Behaviors"
-        TAPDANCE[td0: Tap Dance<br/>Single: LGUI<br/>Double: RG(RIGHT_ALT)]
-        KEYTOGGLE[kt_on: Key Toggle On Only]
-    end
+### Layer Navigation Flow
 
-    %% Hardware Features
-    subgraph "Hardware Integration"
-        ENCODER[Rotary Encoder<br/>Default: Volume Up/Down<br/>Click: Play/Pause]
-        POINTING[Pointing Device<br/>Move Value: 1500]
-        RGB[RGB Underglow<br/>16 LEDs WS2812]
-    end
+**Primary Access Methods:**
+- **DEFAULT** → **RAISE**: Hold Right Alt (momentary)
+- **DEFAULT** → **CONFIGURATION**: Tap Context Menu (layer-tap)
+- **CONFIGURATION** → **ALTERNATIVE**: Toggle Alternative layer
+- **CONFIGURATION** → **UNDERGLOW**: Hold RGB key (momentary)
 
-    %% Connection to layers
-    DEFAULT -.-> TAPDANCE
-    ALTERNATIVE -.-> TAPDANCE
-    RAISE -.-> POINTING
-    CONFIGURATION -.-> ENCODER
-    UNDERGLOW -.-> RGB
+**Layer Return:**
+- Release momentary keys to return to previous layer
+- Toggle layers stay active until toggled again
 
-    %% Styling
-    classDef layer fill:#e1f5fe,stroke:#01579b,stroke-width:2px
-    classDef behavior fill:#f3e5f5,stroke:#4a148c,stroke-width:2px
-    classDef hardware fill:#e8f5e8,stroke:#1b5e20,stroke-width:2px
+## Layer Layouts
 
-    class DEFAULT,ALTERNATIVE,RAISE,CONFIGURATION,UNDERGLOW layer
-    class TAPDANCE,KEYTOGGLE behavior
-    class ENCODER,POINTING,RGB hardware
-```
+### DEFAULT Layer (0) - Base QWERTY
 
-## Layer Navigation Flow
+![DEFAULT Layer](svg/default-layer.svg)
 
-```mermaid
-flowchart TD
-    %% Layer Transitions
-    subgraph "Layer Navigation Flow"
-        A[DEFAULT Layer] --> B{Key Press}
-        B -->|Right Alt| C[RAISE Layer<br/>Momentary]
-        B -->|Context Menu| D[CONFIGURATION Layer<br/>Layer-Tap]
-        B -->|Tap Dance Win Key| E[ALTERNATIVE Layer<br/>Toggle via Config]
+**Features:**
+- Standard QWERTY typing layout
+- Tap dance Win key (single tap = Left GUI, double tap = Right GUI + Right Alt)
+- Rotary encoder: Volume up/down, Play/Pause click
+- Access to other layers via special keys
 
-        C -->|Release| A
-        D -->|Release| A
-        D -->|Toggle Alternative| E
-        D -->|Hold Underglow Key| F[UNDERGLOW Layer<br/>Momentary]
-        F -->|Release| D
-    end
+**Key Highlights:**
+- **Context Menu** (green): Layer-tap to CONFIGURATION layer
+- **Right Alt** (orange): Momentary RAISE layer
+- **Encoder**: Volume control and media playback
 
-    %% Styling
-    classDef default fill:#4caf50,color:#fff
-    classDef momentary fill:#2196f3,color:#fff
-    classDef toggle fill:#ff9800,color:#fff
+### ALTERNATIVE Layer (1) - Win+Alt Mode
 
-    class A default
-    class C,F momentary
-    class D,E toggle
-```
+Same layout as DEFAULT layer but with modified Win key behavior:
+- Win key activates Right GUI + Right Alt combination
+- Useful for specific keyboard shortcuts
+- Accessed via toggle from CONFIGURATION layer
+
+### RAISE Layer (2) - Function & Media Controls
+
+![RAISE Layer](svg/raise-layer-simple.svg)
+
+**Key Groups:**
+- **Function Keys** (blue): F1-F12, Delete
+- **Navigation** (green): Arrow keys, Home, End, Page Up/Down
+- **Media** (orange): Insert, Print Screen
+- **Mouse** (pink): Mouse buttons 4-5
+- **Transparent**: Pass-through to DEFAULT layer
+
+**Common Uses:**
+- Function key access (F1-F12)
+- Navigation and media control
+- Additional mouse buttons
+
+### CONFIGURATION Layer (3) - System Controls
+
+![CONFIGURATION Layer](svg/config-layer-simple.svg)
+
+**Key Groups:**
+- **Bluetooth** (blue): BT0-4 selection, Clear, Underglow access
+- **Mouse** (green): MB1, mouse movement controls, MB2
+- **Media** (orange): Mute, Volume, Next/Previous, Brightness
+- **System** (red): USB/BLE output, Studio unlock, Bootloader, Reset
+- **Layer** (purple): Alternative layer toggle
+
+**Key Functions:**
+- **BT0-BT4**: Select Bluetooth profile
+- **CLR**: Clear current Bluetooth profile
+- **USB/BLE**: Force output connection type
+- **STU**: Unlock ZMK Studio
+- **BOOT**: Enter bootloader mode
+- **RST**: System reset
+- **ALT**: Toggle Alternative layer
+
+### UNDERGLOW Layer (4) - RGB Controls
+
+![UNDERGLOW Layer](svg/rgb-layer-simple.svg)
+
+**Key Groups:**
+- **Effect Control** (blue): Effect forward/reverse
+- **Brightness** (orange): Brightness down/up, toggle on/off
+- **Hue Control** (purple): Hue down/up adjustment
+- **Saturation Control** (red): Saturation down/up adjustment
+- **Transparent**: Pass-through to CONFIGURATION layer
+
+**RGB Functions:**
+- **EFF←/EFF→**: Cycle through RGB effects
+- **BRI-/BRI+**: Decrease/increase brightness
+- **TOG**: Toggle RGB on/off
+- **HUE-/HUE+**: Adjust color hue
+- **SAT-/SAT+**: Adjust color saturation
 
 ## Custom Behaviors
 
-```mermaid
-graph LR
-    subgraph "Custom Behaviors"
-        TD[TAP DANCE td0]
-        KT[KEY TOGGLE kt_on]
+### Tap Dance (td0)
+- **Single tap**: Left GUI (Windows key)
+- **Double tap**: Right GUI + Right Alt combination
+- Useful for both standard Win key functionality and specific shortcuts
 
-        TD -->|Single Tap| LGUI[Left GUI]
-        TD -->|Double Tap| RALT[Right GUI + Right Alt]
+### Key Toggle (kt_on)
+- Toggle-on-only behavior
+- Stays active once enabled
 
-        KT -->|Toggle Mode| ON[On Only]
-    end
-
-    subgraph "Sensor Bindings"
-        ENC[Rotary Encoder]
-        ENC -->|Default Layers| VOL[Volume Up/Down]
-        ENC -->|All Layers| PLAY[Play/Pause Click]
-    end
-
-    classDef behavior fill:#fff3e0,stroke:#e65100,stroke-width:2px
-    class TD,KT,ENC behavior
-```
-
-## Layer Layout Overview
-
-### DEFAULT Layer (0) - QWERTY Layout
-```mermaid
-quadrantChart
-    title DEFAULT Layer (0) - QWERTY Layout
-    x-axis --> [Esc] [Number Row] [QWERTY] [Bottom Row]
-    y-axis --> [Left Side] [Middle] [Right Side] [Thumb Cluster]
-    quadrant-1 --> [Number Keys: 1-0, -, =]
-    quadrant-2 --> [Esc, Tab, Grave]
-    quadrant-3 --> [Ctrl, Win, Alt, Space]
-    quadrant-4 --> [Backspace, Enter, Shift]
-```
-
-### RAISE Layer (2) - Function & Navigation
-```mermaid
-quadrantChart
-    title RAISE Layer (2) - Function & Navigation
-    x-axis --> [Function Keys] [Navigation] [Media] [Mouse]
-    y-axis --> [Top Row] [Middle Rows] [Bottom Row] [Special]
-    quadrant-1 --> [F1-F12, Delete]
-    quadrant-2 --> [Home, End, Insert, Print Screen]
-    quadrant-3 --> [Arrow Keys, Page Up/Down]
-    quadrant-4 --> [Mouse Buttons 4-5]
-```
-
-### CONFIGURATION Layer (3) - System Control
-```mermaid
-quadrantChart
-    title CONFIGURATION Layer (3) - System Control
-    x-axis --> [Bluetooth] [Mouse Control] [Output] [System]
-    y-axis --> [Top Row] [Middle Rows] [Bottom Row] [Functions]
-    quadrant-1 --> [BT 0-4 Selection, Clear]
-    quadrant-2 --> [Mouse Movement & Buttons]
-    quadrant-3 --> [USB/BLE Output, Studio Unlock]
-    quadrant-4 --> [Brightness, Reset, Bootloader]
-```
-
-### UNDERGLOW Layer (4) - RGB Controls
-```mermaid
-quadrantChart
-    title UNDERGLOW Layer (4) - RGB Controls
-    x-axis --> [Effect Control] [Brightness] [Color] [Saturation]
-    y-axis --> [Top Row] [Middle Rows] [Bottom Row] [Active Zone]
-    quadrant-1 --> [Effect Forward/Reverse]
-    quadrant-2 --> [Brightness Down/Up, Toggle]
-    quadrant-3 --> [Hue Down/Up]
-    quadrant-4 --> [Saturation Down/Up]
-```
-
-## Complete Keymap Reference
-
-```mermaid
-mindmap
-  root((Cyber60 Keymap))
-    DEFAULT Layer 0
-      ESC
-      Number Row[1-0, -, =, Backspace×2]
-      QWERTY[QWERTYUIOP, []\\]
-      Home Row[ASDFGHJKL, ', Enter×2]
-      Bottom Row[ZXCVM,.,/, Shift, Context Menu]
-      Modifiers[Ctrl, Win, Alt, Space×4, Alt, Raise, Ctrl]
-    ALTERNATIVE Layer 1
-      Same as DEFAULT
-      Modified Win Key[Win+Right Alt]
-    RAISE Layer 2
-      Function Keys[F1-F12, Delete×2]
-      Navigation[Home, ↑, End, Insert, Print Screen]
-      Arrows[Caps, ←↓→, Page Up]
-      Mouse[MB4, MB5, Page Down]
-      Empty Rows[Mostly transparent]
-    CONFIGURATION Layer 3
-      Bluetooth[Underglow, BT0-4, Clear×2]
-      Mouse Control[MB1, Mouse Movement, MB2]
-      Media[Studio Unlock, Next/Previous, Bootloader]
-      System[BLE Output, Brightness, Reset]
-      Alt Toggle[Alternative Layer Toggle]
-    UNDERGLOW Layer 4
-      Effects[Effect Forward/Reverse]
-      Brightness[Brightness Down/Up, Toggle]
-      Color[Hue Down/Up]
-      Saturation[Saturation Down/Up]
-```
+### Sensor Bindings
+- **Rotary Encoder**: Volume up/down by default, Play/Pause on click
+- **Pointing Device**: Enhanced mouse movement (speed: 1500 vs default 600)
 
 ## Key Features Summary
 
-### Layer Navigation
-- **DEFAULT**: Base QWERTY layer
-- **RAISE**: Momentary (Right Alt)
-- **CONFIGURATION**: Layer-tap (Context Menu)
-- **ALTERNATIVE**: Toggle (from CONFIGURATION)
-- **UNDERGLOW**: Momentary (from CONFIGURATION)
-
-### Special Behaviors
-- **Tap Dance (td0)**: Single tap = Left GUI, Double tap = Right GUI + Right Alt
-- **Rotary Encoder**: Volume control + Play/Pause click
-- **Pointing Device**: Enhanced movement speed (1500 vs default 600)
-
-### Access Methods
-- `mo RAISE` (Right Alt) - Momentary activation
-- `lt CONFIGURATION K_CMENU` - Layer-tap on context menu
-- `tog ALTERNATIVE` - Toggle alternative layer
-- `studio_unlock` - Enable ZMK Studio runtime configuration
-
-### Hardware Integration
+### Hardware Specifications
 - **MCU**: nRF52840 (ARM Cortex-M4)
 - **RGB**: 16 WS2812 LEDs with SPI3 control
 - **Encoder**: Rotary encoder with push button
 - **Pointing**: Mouse movement and button support
 - **Connectivity**: Bluetooth LE + USB with ZMK Studio
 
+### Layer Access Summary
+| Layer | Access Method | Key | Behavior |
+|-------|----------------|-----|----------|
+| DEFAULT | Base layer | - | Always active |
+| RAISE | Momentary | Right Alt | Hold to activate |
+| CONFIGURATION | Layer-tap | Context Menu | Tap to activate |
+| ALTERNATIVE | Toggle | CONFIG → ALT | Toggle on/off |
+| UNDERGLOW | Momentary | CONFIG → RGB | Hold to activate |
+
+### Special Functions
+- **studio_unlock**: Enable ZMK Studio runtime configuration
+- **bootloader**: Enter DFU mode for firmware updates
+- **sys_reset**: Perform system reset
+- **RGB underglow**: 16 LED strip with SPI control
+- **Pointing device**: Enhanced mouse control
+
 ## File Reference
 
 - **Configuration**: `config/cyber60_rev_d.keymap`
 - **Hardware Definition**: `config/boards/arm/cyber60_rev_d/cyber60_rev_d.dts`
 - **Build Configuration**: `build.yaml`
+
+## Usage Tips
+
+1. **Layer Navigation**: Use Right Alt for quick access to function keys, Context Menu for system controls
+2. **Bluetooth Management**: Access via CONFIGURATION layer (Context Menu → BT keys)
+3. **RGB Control**: Access via CONFIGURATION layer (Context Menu → RGB key → UNDERGLOW layer)
+4. **Mouse Control**: Use CONFIGURATION layer for mouse movement and RAISE layer for mouse buttons 4-5
+5. **Firmware Updates**: Use BOOT key in CONFIGURATION layer to enter bootloader mode
 
 This documentation provides a comprehensive overview of the Cyber60 keyboard's keybinding structure, showing how the layers interact and the special behaviors configured in the ZMK firmware.
 
