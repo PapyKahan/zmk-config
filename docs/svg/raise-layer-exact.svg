@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <style>
+      .key {
+        fill: #2d2d2d;
+        stroke: #4a4a4a;
+        stroke-width: 1;
+        rx: 3;
+      }
+      .key-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 10px;
+        font-weight: 500;
+        fill: #ffffff;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .key-function {
+        fill: #1e3a8a;
+        stroke: #3b82f6;
+      }
+      .key-nav {
+        fill: #14532d;
+        stroke: #22c55e;
+      }
+      .key-media {
+        fill: #713f12;
+        stroke: #f59e0b;
+      }
+      .key-mouse {
+        fill: #831843;
+        stroke: #ec4899;
+      }
+      .key-transparent {
+        fill: #1a1a1a;
+        stroke: #374151;
+        stroke-dasharray: 2,2;
+      }
+      .key-transparent .key-text {
+        fill: #6b7280;
+      }
+      .title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 16px;
+        font-weight: 600;
+        fill: #ffffff;
+      }
+      .subtitle {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        font-size: 12px;
+        fill: #9ca3af;
+        font-weight: 400;
+      }
+    </style>
+  </defs>
+
+  <!-- Dark background -->
+  <rect width="800" height="300" fill="#1a1a1a"/>
+
+  <!-- Title -->
+  <text x="40" y="25" class="title">RAISE LAYER (2)</text>
+  <text x="40" y="42" class="subtitle">Function Keys, Navigation & Media Controls</text>
+
+  <!-- Row 1: 15 keys -->
+  <rect x="40" y="60" width="35" height="35" class="key-transparent"/>
+  <text x="57" y="77" class="key-text">—</text>
+
+  <rect x="80" y="60" width="35" height="35" class="key-function"/>
+  <text x="97" y="77" class="key-text">F1</text>
+
+  <rect x="120" y="60" width="35" height="35" class="key-function"/>
+  <text x="137" y="77" class="key-text">F2</text>
+
+  <rect x="160" y="60" width="35" height="35" class="key-function"/>
+  <text x="177" y="77" class="key-text">F3</text>
+
+  <rect x="200" y="60" width="35" height="35" class="key-function"/>
+  <text x="217" y="77" class="key-text">F4</text>
+
+  <rect x="240" y="60" width="35" height="35" class="key-function"/>
+  <text x="257" y="77" class="key-text">F5</text>
+
+  <rect x="280" y="60" width="35" height="35" class="key-function"/>
+  <text x="297" y="77" class="key-text">F6</text>
+
+  <rect x="320" y="60" width="35" height="35" class="key-function"/>
+  <text x="337" y="77" class="key-text">F7</text>
+
+  <rect x="360" y="60" width="35" height="35" class="key-function"/>
+  <text x="377" y="77" class="key-text">F8</text>
+
+  <rect x="400" y="60" width="35" height="35" class="key-function"/>
+  <text x="417" y="77" class="key-text">F9</text>
+
+  <rect x="440" y="60" width="35" height="35" class="key-function"/>
+  <text x="457" y="77" class="key-text">F10</text>
+
+  <rect x="480" y="60" width="35" height="35" class="key-function"/>
+  <text x="497" y="77" class="key-text">F11</text>
+
+  <rect x="520" y="60" width="35" height="35" class="key-function"/>
+  <text x="537" y="77" class="key-text">F12</text>
+
+  <rect x="560" y="60" width="35" height="35" class="key-media"/>
+  <text x="577" y="77" class="key-text">DEL</text>
+
+  <rect x="600" y="60" width="35" height="35" class="key-media"/>
+  <text x="617" y="77" class="key-text">DEL</text>
+
+  <!-- Row 2: 14 keys -->
+  <rect x="40" y="100" width="52" height="35" class="key-transparent"/>
+  <text x="66" y="117" class="key-text">—</text>
+
+  <rect x="97" y="100" width="35" height="35" class="key-nav"/>
+  <text x="114" y="117" class="key-text">HOME</text>
+
+  <rect x="137" y="100" width="35" height="35" class="key-nav"/>
+  <text x="154" y="117" class="key-text">↑</text>
+
+  <rect x="177" y="100" width="35" height="35" class="key-nav"/>
+  <text x="194" y="117" class="key-text">END</text>
+
+  <rect x="217" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="234" y="117" class="key-text">—</text>
+
+  <rect x="257" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="274" y="117" class="key-text">—</text>
+
+  <rect x="297" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="314" y="117" class="key-text">—</text>
+
+  <rect x="337" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="354" y="117" class="key-text">—</text>
+
+  <rect x="377" y="100" width="35" height="35" class="key-media"/>
+  <text x="394" y="117" class="key-text">INS</text>
+
+  <rect x="417" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="434" y="117" class="key-text">—</text>
+
+  <rect x="457" y="100" width="35" height="35" class="key-media"/>
+  <text x="474" y="117" class="key-text">PRT</text>
+
+  <rect x="497" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="514" y="117" class="key-text">—</text>
+
+  <rect x="537" y="100" width="35" height="35" class="key-transparent"/>
+  <text x="554" y="117" class="key-text">—</text>
+
+  <rect x="577" y="100" width="58" height="35" class="key-transparent"/>
+  <text x="606" y="117" class="key-text">—</text>
+
+  <!-- Row 3: 14 keys -->
+  <rect x="40" y="140" width="52" height="35" class="key-nav"/>
+  <text x="66" y="157" class="key-text">CAPS</text>
+
+  <rect x="97" y="140" width="35" height="35" class="key-nav"/>
+  <text x="114" y="157" class="key-text">←</text>
+
+  <rect x="137" y="140" width="35" height="35" class="key-nav"/>
+  <text x="154" y="157" class="key-text">↓</text>
+
+  <rect x="177" y="140" width="35" height="35" class="key-nav"/>
+  <text x="194" y="157" class="key-text">→</text>
+
+  <rect x="217" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="234" y="157" class="key-text">—</text>
+
+  <rect x="257" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="274" y="157" class="key-text">—</text>
+
+  <rect x="297" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="314" y="157" class="key-text">—</text>
+
+  <rect x="337" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="354" y="157" class="key-text">—</text>
+
+  <rect x="377" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="394" y="157" class="key-text">—</text>
+
+  <rect x="417" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="434" y="157" class="key-text">—</text>
+
+  <rect x="457" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="474" y="157" class="key-text">—</text>
+
+  <rect x="497" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="514" y="157" class="key-text">—</text>
+
+  <rect x="537" y="140" width="35" height="35" class="key-transparent"/>
+  <text x="554" y="157" class="key-text">—</text>
+
+  <rect x="577" y="140" width="58" height="35" class="key-transparent"/>
+  <text x="606" y="157" class="key-text">—</text>
+
+  <!-- Row 4: 14 keys -->
+  <rect x="40" y="180" width="70" height="35" class="key-transparent"/>
+  <text x="75" y="197" class="key-text">—</text>
+
+  <rect x="115" y="180" width="70" height="35" class="key-mouse"/>
+  <text x="150" y="197" class="key-text">MB4</text>
+
+  <rect x="190" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="207" y="197" class="key-text">—</text>
+
+  <rect x="230" y="180" width="35" height="35" class="key-mouse"/>
+  <text x="247" y="197" class="key-text">MB5</text>
+
+  <rect x="270" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="287" y="197" class="key-text">—</text>
+
+  <rect x="310" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="327" y="197" class="key-text">—</text>
+
+  <rect x="350" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="367" y="197" class="key-text">—</text>
+
+  <rect x="390" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="407" y="197" class="key-text">—</text>
+
+  <rect x="430" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="447" y="197" class="key-text">—</text>
+
+  <rect x="470" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="487" y="197" class="key-text">—</text>
+
+  <rect x="510" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="527" y="197" class="key-text">—</text>
+
+  <rect x="550" y="180" width="35" height="35" class="key-transparent"/>
+  <text x="567" y="197" class="key-text">—</text>
+
+  <rect x="590" y="180" width="35" height="35" class="key-nav"/>
+  <text x="607" y="197" class="key-text">PG↓</text>
+
+  <!-- Row 5: 7 keys -->
+  <rect x="40" y="220" width="45" height="35" class="key-transparent"/>
+  <text x="62" y="237" class="key-text">—</text>
+
+  <rect x="90" y="220" width="45" height="35" class="key-transparent"/>
+  <text x="112" y="237" class="key-text">—</text>
+
+  <rect x="140" y="220" width="45" height="35" class="key-transparent"/>
+  <text x="162" y="237" class="key-text">—</text>
+
+  <rect x="190" y="220" width="225" height="35" class="key-transparent"/>
+  <text x="302" y="237" class="key-text">—</text>
+
+  <rect x="420" y="220" width="45" height="35" class="key-transparent"/>
+  <text x="442" y="237" class="key-text">—</text>
+
+  <rect x="470" y="220" width="50" height="35" class="key-transparent"/>
+  <text x="495" y="237" class="key-text">—</text>
+
+  <rect x="525" y="220" width="45" height="35" class="key-transparent"/>
+  <text x="547" y="237" class="key-text">—</text>
+
+  <!-- Legend -->
+  <text x="40" y="285" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; fill: #9ca3af;">
+    Blue: Function keys | Green: Navigation | Yellow: Media | Pink: Mouse buttons | Gray: Transparent (pass-through)
+  </text>
+</svg>

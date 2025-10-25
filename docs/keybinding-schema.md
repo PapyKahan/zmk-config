@@ -28,7 +28,7 @@ The keyboard features 5 distinct layers with a dark theme design:
 
 ### DEFAULT Layer (0) - Base QWERTY
 
-![DEFAULT Layer](svg/default-layer-dark.svg)
+![DEFAULT Layer](svg/default-layer-exact.svg)
 
 **Features:**
 - Standard QWERTY typing layout with dark theme keys
@@ -50,7 +50,7 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 
 ### RAISE Layer (2) - Function & Media Controls
 
-![RAISE Layer](svg/raise-layer-dark.svg)
+![RAISE Layer](svg/raise-layer-exact.svg)
 
 **Key Groups:**
 - **Function Keys** (blue): F1-F12, Delete
@@ -66,7 +66,7 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 
 ### CONFIGURATION Layer (3) - System Controls
 
-![CONFIGURATION Layer](svg/config-layer-dark.svg)
+![CONFIGURATION Layer](svg/config-layer-exact.svg)
 
 **Key Groups:**
 - **Bluetooth** (blue): BT0-4 selection, Clear, Underglow access
@@ -86,7 +86,7 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 
 ### UNDERGLOW Layer (4) - RGB Controls
 
-![UNDERGLOW Layer](svg/rgb-layer-dark.svg)
+![UNDERGLOW Layer](svg/rgb-layer-exact.svg)
 
 **Key Groups:**
 - **Effect Control** (blue): Effect forward/reverse
@@ -126,12 +126,13 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 - **Pointing**: Mouse movement and button support
 - **Connectivity**: Bluetooth LE + USB with ZMK Studio
 
-### Dark Theme Design
+### Exact Layout Design
 - **Background**: Dark (#1a1a1a) matching real keyboard
 - **Keys**: Dark gray with subtle borders
 - **Text**: White/light for high contrast
 - **Color coding**: Functional groups with distinct colors
-- **Encoder**: Positioned on right side as in actual layout
+- **Layout**: Exact 60% keyboard dimensions (15-14-14-14-7 key layout)
+- **Space bar**: Unsplit, single space bar spanning 4 key positions
 
 ### Layer Access Summary
 | Layer | Access Method | Key | Behavior |
@@ -167,10 +168,11 @@ Same layout as DEFAULT layer but with modified Win key behavior:
 
 All SVG diagrams follow a consistent dark theme that matches the actual keyboard:
 - **Dark background** with high contrast text
-- **Accurate 60% keyboard layout** with proper key positioning
+- **Exact 60% keyboard layout** with proper key positioning (15-14-14-14-7 layout)
 - **Realistic key styling** with subtle borders and rounded corners
 - **Color-coded functional groups** for easy identification
-- **Encoder position** matching the actual hardware layout
+- **Unsplit space bar** matching the actual hardware layout
+- **No encoder or extra hardware** - pure 60% keyboard representation
 
 This documentation provides a comprehensive overview of the Cyber60 keyboard's keybinding structure, showing how the layers interact and the special behaviors configured in the ZMK firmware, with visual representations that accurately match the real keyboard's appearance.
 
