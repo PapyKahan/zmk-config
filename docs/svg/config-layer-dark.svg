@@ -77,7 +77,7 @@
 
   <!-- Title -->
   <text x="40" y="30" class="title">CONFIGURATION LAYER (3)</text>
-  <text x="40" y="50" class="subtitle">System Controls, Bluetooth & Mouse Management</text>
+  <text x="40" y="50" class="subtitle">System Controls, Bluetooth &amp; Mouse Management</text>
 
   <!-- Row 1 -->
   <rect x="40" y="70" width="40" height="40" class="key-layer"/>
