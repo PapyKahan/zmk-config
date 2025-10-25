@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 300" width="800" height="300">
+  <defs>
+    <style>
+      .key {
+        fill: #ffffff;
+        stroke: #333333;
+        stroke-width: 1.5;
+        rx: 4;
+      }
+      .key-text {
+        font-family: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', monospace;
+        font-size: 10px;
+        font-weight: 600;
+        fill: #1a1a1a;
+        text-anchor: middle;
+        dominant-baseline: middle;
+      }
+      .key-1u { width: 36px; height: 36px; }
+      .key-1u-5 { width: 54px; height: 36px; }
+      .key-2u { width: 72px; height: 36px; }
+      .key-2u-25 { width: 81px; height: 36px; }
+      .key-6u { width: 216px; height: 36px; }
+      .key-2u-5 { width: 90px; height: 36px; }
+      .layer-title {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        fill: #ff9800;
+      }
+      .layer-subtitle {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        font-size: 12px;
+        fill: #666666;
+      }
+      .encoder {
+        fill: #fff3e0;
+        stroke: #ff9800;
+        stroke-width: 2;
+        stroke-dasharray: 3,2;
+      }
+      .encoder-text {
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+        font-size: 8px;
+        fill: #ff9800;
+        text-anchor: middle;
+      }
+      .modified-key {
+        fill: #fff8e1;
+        stroke: #ff9800;
+        stroke-width: 2;
+      }
+    </style>
+  </defs>
+
+  <!-- Title -->
+  <text x="10" y="25" class="layer-title">ALTERNATIVE LAYER (1)</text>
+  <text x="10" y="42" class="layer-subtitle">Win+Alt Mode (Toggle via CONFIGURATION)</text>
+
+  <!-- Row 1: ESC, 1-9, 0, -, =, Backspace×2 -->
+  <rect x="10" y="60" width="36" height="36" class="key"/>
+  <text x="28" y="78" class="key-text">ESC</text>
+
+  <rect x="52" y="60" width="36" height="36" class="key"/>
+  <text x="70" y="78" class="key-text">1</text>
+
+  <rect x="94" y="60" width="36" height="36" class="key"/>
+  <text x="112" y="78" class="key-text">2</text>
+
+  <rect x="136" y="60" width="36" height="36" class="key"/>
+  <text x="154" y="78" class="key-text">3</text>
+
+  <rect x="178" y="60" width="36" height="36" class="key"/>
+  <text x="196" y="78" class="key-text">4</text>
+
+  <rect x="220" y="60" width="36" height="36" class="key"/>
+  <text x="238" y="78" class="key-text">5</text>
+
+  <rect x="262" y="60" width="36" height="36" class="key"/>
+  <text x="280" y="78" class="key-text">6</text>
+
+  <rect x="304" y="60" width="36" height="36" class="key"/>
+  <text x="322" y="78" class="key-text">7</text>
+
+  <rect x="346" y="60" width="36" height="36" class="key"/>
+  <text x="364" y="78" class="key-text">8</text>
+
+  <rect x="388" y="60" width="36" height="36" class="key"/>
+  <text x="406" y="78" class="key-text">9</text>
+
+  <rect x="430" y="60" width="36" height="36" class="key"/>
+  <text x="448" y="78" class="key-text">0</text>
+
+  <rect x="472" y="60" width="36" height="36" class="key"/>
+  <text x="490" y="78" class="key-text">-</text>
+
+  <rect x="514" y="60" width="36" height="36" class="key"/>
+  <text x="532" y="78" class="key-text">=</text>
+
+  <rect x="556" y="60" width="36" height="36" class="key"/>
+  <text x="574" y="78" class="key-text">←</text>
+
+  <rect x="598" y="60" width="36" height="36" class="key"/>
+  <text x="616" y="78" class="key-text">←</text>
+
+  <!-- Row 2: TAB, Q-P, [, ], \ -->
+  <rect x="10" y="102" width="54" height="36" class="key"/>
+  <text x="37" y="120" class="key-text">TAB</text>
+
+  <rect x="70" y="102" width="36" height="36" class="key"/>
+  <text x="88" y="120" class="key-text">Q</text>
+
+  <rect x="112" y="102" width="36" height="36" class="key"/>
+  <text x="130" y="120" class="key-text">W</text>
+
+  <rect x="154" y="102" width="36" height="36" class="key"/>
+  <text x="172" y="120" class="key-text">E</text>
+
+  <rect x="196" y="102" width="36" height="36" class="key"/>
+  <text x="214" y="120" class="key-text">R</text>
+
+  <rect x="238" y="102" width="36" height="36" class="key"/>
+  <text x="256" y="120" class="key-text">T</text>
+
+  <rect x="280" y="102" width="36" height="36" class="key"/>
+  <text x="298" y="120" class="key-text">Y</text>
+
+  <rect x="322" y="102" width="36" height="36" class="key"/>
+  <text x="340" y="120" class="key-text">U</text>
+
+  <rect x="364" y="102" width="36" height="36" class="key"/>
+  <text x="382" y="120" class="key-text">I</text>
+
+  <rect x="406" y="102" width="36" height="36" class="key"/>
+  <text x="424" y="120" class="key-text">O</text>
+
+  <rect x="448" y="102" width="36" height="36" class="key"/>
+  <text x="466" y="120" class="key-text">P</text>
+
+  <rect x="490" y="102" width="36" height="36" class="key"/>
+  <text x="508" y="120" class="key-text">[</text>
+
+  <rect x="532" y="102" width="36" height="36" class="key"/>
+  <text x="550" y="120" class="key-text">]</text>
+
+  <rect x="574" y="102" width="60" height="36" class="key"/>
+  <text x="604" y="120" class="key-text">\</text>
+
+  <!-- Row 3: GRAVE, A-L, ;, ', Enter×2 -->
+  <rect x="10" y="144" width="54" height="36" class="key"/>
+  <text x="37" y="162" class="key-text">`</text>
+
+  <rect x="70" y="144" width="36" height="36" class="key"/>
+  <text x="88" y="162" class="key-text">A</text>
+
+  <rect x="112" y="144" width="36" height="36" class="key"/>
+  <text x="130" y="162" class="key-text">S</text>
+
+  <rect x="154" y="144" width="36" height="36" class="key"/>
+  <text x="172" y="162" class="key-text">D</text>
+
+  <rect x="196" y="144" width="36" height="36" class="key"/>
+  <text x="214" y="162" class="key-text">F</text>
+
+  <rect x="238" y="144" width="36" height="36" class="key"/>
+  <text x="256" y="162" class="key-text">G</text>
+
+  <rect x="280" y="144" width="36" height="36" class="key"/>
+  <text x="298" y="162" class="key-text">H</text>
+
+  <rect x="322" y="144" width="36" height="36" class="key"/>
+  <text x="340" y="162" class="key-text">J</text>
+
+  <rect x="364" y="144" width="36" height="36" class="key"/>
+  <text x="382" y="162" class="key-text">K</text>
+
+  <rect x="406" y="144" width="36" height="36" class="key"/>
+  <text x="424" y="162" class="key-text">L</text>
+
+  <rect x="448" y="144" width="36" height="36" class="key"/>
+  <text x="466" y="162" class="key-text">;</text>
+
+  <rect x="490" y="144" width="36" height="36" class="key"/>
+  <text x="508" y="162" class="key-text">'</text>
+
+  <rect x="532" y="144" width="36" height="36" class="key"/>
+  <text x="550" y="162" class="key-text">⏎</text>
+
+  <rect x="574" y="144" width="60" height="36" class="key"/>
+  <text x="604" y="162" class="key-text">⏎</text>
+
+  <!-- Row 4: Shift×2, Z-/, Shift, CONFIG -->
+  <rect x="10" y="186" width="54" height="36" class="key"/>
+  <text x="37" y="204" class="key-text">⇧</text>
+
+  <rect x="70" y="186" width="54" height="36" class="key"/>
+  <text x="97" y="204" class="key-text">⇧</text>
+
+  <rect x="130" y="186" width="36" height="36" class="key"/>
+  <text x="148" y="204" class="key-text">Z</text>
+
+  <rect x="172" y="186" width="36" height="36" class="key"/>
+  <text x="190" y="204" class="key-text">X</text>
+
+  <rect x="214" y="186" width="36" height="36" class="key"/>
+  <text x="232" y="204" class="key-text">C</text>
+
+  <rect x="256" y="186" width="36" height="36" class="key"/>
+  <text x="274" y="204" class="key-text">V</text>
+
+  <rect x="298" y="186" width="36" height="36" class="key"/>
+  <text x="316" y="204" class="key-text">B</text>
+
+  <rect x="340" y="186" width="36" height="36" class="key"/>
+  <text x="358" y="204" class="key-text">N</text>
+
+  <rect x="382" y="186" width="36" height="36" class="key"/>
+  <text x="400" y="204" class="key-text">M</text>
+
+  <rect x="424" y="186" width="36" height="36" class="key"/>
+  <text x="442" y="204" class="key-text">,</text>
+
+  <rect x="466" y="186" width="36" height="36" class="key"/>
+  <text x="484" y="204" class="key-text">.</text>
+
+  <rect x="508" y="186" width="36" height="36" class="key"/>
+  <text x="526" y="204" class="key-text">/</text>
+
+  <rect x="550" y="186" width="54" height="36" class="key"/>
+  <text x="577" y="204" class="key-text">⇧</text>
+
+  <rect x="610" y="186" width="54" height="36" key style="fill: #e8f5e8;"/>
+  <text x="637" y="204" class="key-text">⚙</text>
+  <text x="637" y="215" class="key-text" style="font-size: 7px;">CONFIG</text>
+
+  <!-- Row 5: Ctrl, Win+RightAlt, Alt, Space×4, Alt, Raise, Ctrl -->
+  <rect x="10" y="228" width="48" height="36" class="key"/>
+  <text x="34" y="246" class="key-text">⌃</text>
+
+  <rect x="62" y="228" width="48" height="36" class="modified-key"/>
+  <text x="86" y="240" class="key-text" style="font-size: 8px;">⊞+⌥</text>
+  <text x="86" y="250" class="key-text" style="font-size: 6px;">Win+Alt</text>
+
+  <rect x="114" y="228" width="48" height="36" class="key"/>
+  <text x="138" y="246" class="key-text">⌥</text>
+
+  <rect x="166" y="228" width="54" height="36" class="key"/>
+  <text x="193" y="246" class="key-text">SPACE</text>
+
+  <rect x="224" y="228" width="54" height="36" class="key"/>
+  <text x="251" y="246" class="key-text">SPACE</text>
+
+  <rect x="282" y="228" width="54" height="36" class="key"/>
+  <text x="309" y="246" class="key-text">SPACE</text>
+
+  <rect x="340" y="228" width="54" height="36" class="key"/>
+  <text x="367" y="246" class="key-text">SPACE</text>
+
+  <rect x="398" y="228" width="48" height="36" class="key"/>
+  <text x="422" y="246" class="key-text">⌥</text>
+
+  <rect x="450" y="228" width="54" height="36" key style="fill: #fff3e0;"/>
+  <text x="477" y="246" class="key-text">RAISE</text>
+
+  <rect x="508" y="228" width="48" height="36" class="key"/>
+  <text x="532" y="246" class="key-text">⌃</text>
+
+  <!-- Encoder indicator -->
+  <circle cx="680" cy="150" r="25" class="encoder"/>
+  <text x="680" y="150" class="encoder-text">ENC</text>
+  <text x="680" y="160" class="encoder-text" style="font-size: 7px;">⏯</text>
+  <text x="680" y="120" class="encoder-text" style="font-size: 7px;">VOL↑</text>
+  <text x="680" y="180" class="encoder-text" style="font-size: 7px;">VOL↓</text>
+
+  <!-- Legend -->
+  <g transform="translate(10, 280)">
+    <rect x="0" y="0" width="12" height="12" style="fill: #fff8e1; stroke: #ff9800; stroke-width: 2;"/>
+    <text x="16" y="10" style="font-size: 10px; fill: #666;">Modified key (Win+Right Alt)</text>
+
+    <rect x="180" y="0" width="12" height="12" style="fill: #fff3e0; stroke: #333; stroke-width: 1;"/>
+    <text x="196" y="10" style="font-size: 10px; fill: #666;">Momentary layer (RAISE on hold)</text>
+
+    <circle cx="340" cy="6" r="6" style="fill: #fff3e0; stroke: #ff9800; stroke-width: 1; stroke-dasharray: 2,1;"/>
+    <text x="350" y="10" style="font-size: 10px; fill: #666;">Rotary encoder</text>
+  </g>
+</svg>
