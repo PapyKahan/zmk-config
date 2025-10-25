@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 340" width="800" height="340">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 280" width="700" height="280">
   <defs>
     <style>
       .key {
@@ -30,19 +30,6 @@
       .key-layer .key-text {
         fill: #ffffff;
       }
-      .encoder {
-        fill: #374151;
-        stroke: #6b7280;
-        stroke-width: 2;
-        stroke-dasharray: 3,2;
-      }
-      .encoder-text {
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-        font-size: 9px;
-        fill: #d1d5db;
-        text-anchor: middle;
-        dominant-baseline: middle;
-      }
       .title {
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
         font-size: 16px;
@@ -58,220 +45,203 @@
     </style>
   </defs>
 
-  <!-- Dark background -->
-  <rect width="800" height="340" fill="#1a1a1a"/>
+  <!-- Dark background matching screenshot -->
+  <rect width="700" height="280" fill="#1a1a1a"/>
 
   <!-- Title -->
-  <text x="40" y="30" class="title">DEFAULT LAYER (0)</text>
-  <text x="40" y="50" class="subtitle">Base QWERTY Layout</text>
+  <text x="30" y="25" class="title">DEFAULT LAYER (0)</text>
+  <text x="30" y="42" class="subtitle">Base QWERTY Layout</text>
 
-  <!-- Row 1 -->
-  <rect x="40" y="70" width="40" height="40" class="key"/>
-  <text x="60" y="90" class="key-text">ESC</text>
+  <!-- Row 1: 15 keys with single backspace -->
+  <rect x="30" y="60" width="35" height="35" class="key"/>
+  <text x="47.5" y="77.5" class="key-text">ESC</text>
 
-  <rect x="85" y="70" width="40" height="40" class="key"/>
-  <text x="105" y="90" class="key-text">1</text>
+  <rect x="70" y="60" width="35" height="35" class="key"/>
+  <text x="87.5" y="77.5" class="key-text">1</text>
 
-  <rect x="130" y="70" width="40" height="40" class="key"/>
-  <text x="150" y="90" class="key-text">2</text>
+  <rect x="110" y="60" width="35" height="35" class="key"/>
+  <text x="127.5" y="77.5" class="key-text">2</text>
 
-  <rect x="175" y="70" width="40" height="40" class="key"/>
-  <text x="195" y="90" class="key-text">3</text>
+  <rect x="150" y="60" width="35" height="35" class="key"/>
+  <text x="167.5" y="77.5" class="key-text">3</text>
 
-  <rect x="220" y="70" width="40" height="40" class="key"/>
-  <text x="240" y="90" class="key-text">4</text>
+  <rect x="190" y="60" width="35" height="35" class="key"/>
+  <text x="207.5" y="77.5" class="key-text">4</text>
 
-  <rect x="265" y="70" width="40" height="40" class="key"/>
-  <text x="285" y="90" class="key-text">5</text>
+  <rect x="230" y="60" width="35" height="35" class="key"/>
+  <text x="247.5" y="77.5" class="key-text">5</text>
 
-  <rect x="310" y="70" width="40" height="40" class="key"/>
-  <text x="330" y="90" class="key-text">6</text>
+  <rect x="270" y="60" width="35" height="35" class="key"/>
+  <text x="287.5" y="77.5" class="key-text">6</text>
 
-  <rect x="355" y="70" width="40" height="40" class="key"/>
-  <text x="375" y="90" class="key-text">7</text>
+  <rect x="310" y="60" width="35" height="35" class="key"/>
+  <text x="327.5" y="77.5" class="key-text">7</text>
 
-  <rect x="400" y="70" width="40" height="40" class="key"/>
-  <text x="420" y="90" class="key-text">8</text>
+  <rect x="350" y="60" width="35" height="35" class="key"/>
+  <text x="367.5" y="77.5" class="key-text">8</text>
 
-  <rect x="445" y="70" width="40" height="40" class="key"/>
-  <text x="465" y="90" class="key-text">9</text>
+  <rect x="390" y="60" width="35" height="35" class="key"/>
+  <text x="407.5" y="77.5" class="key-text">9</text>
 
-  <rect x="490" y="70" width="40" height="40" class="key"/>
-  <text x="510" y="90" class="key-text">0</text>
+  <rect x="430" y="60" width="35" height="35" class="key"/>
+  <text x="447.5" y="77.5" class="key-text">0</text>
 
-  <rect x="535" y="70" width="40" height="40" class="key"/>
-  <text x="555" y="90" class="key-text">-</text>
+  <rect x="470" y="60" width="35" height="35" class="key"/>
+  <text x="487.5" y="77.5" class="key-text">-</text>
 
-  <rect x="580" y="70" width="40" height="40" class="key"/>
-  <text x="600" y="90" class="key-text">=</text>
+  <rect x="510" y="60" width="35" height="35" class="key"/>
+  <text x="527.5" y="77.5" class="key-text">=</text>
 
-  <rect x="625" y="70" width="40" height="40" class="key"/>
-  <text x="645" y="90" class="key-text">⌫</text>
+  <rect x="550" y="60" width="70" height="35" class="key"/>
+  <text x="585" y="77.5" class="key-text">⌫</text>
 
-  <rect x="670" y="70" width="40" height="40" class="key"/>
-  <text x="690" y="90" class="key-text">⌫</text>
+  <!-- Row 2: 14 keys with proper 1.5x tab -->
+  <rect x="30" y="100" width="52.5" height="35" class="key"/>
+  <text x="56.25" y="117.5" class="key-text">TAB</text>
 
-  <!-- Row 2 -->
-  <rect x="40" y="115" width="60" height="40" class="key"/>
-  <text x="70" y="135" class="key-text">TAB</text>
+  <rect x="87.5" y="100" width="35" height="35" class="key"/>
+  <text x="105" y="117.5" class="key-text">Q</text>
 
-  <rect x="105" y="115" width="40" height="40" class="key"/>
-  <text x="125" y="135" class="key-text">Q</text>
+  <rect x="127.5" y="100" width="35" height="35" class="key"/>
+  <text x="145" y="117.5" class="key-text">W</text>
 
-  <rect x="150" y="115" width="40" height="40" class="key"/>
-  <text x="170" y="135" class="key-text">W</text>
+  <rect x="167.5" y="100" width="35" height="35" class="key"/>
+  <text x="185" y="117.5" class="key-text">E</text>
 
-  <rect x="195" y="115" width="40" height="40" class="key"/>
-  <text x="215" y="135" class="key-text">E</text>
+  <rect x="207.5" y="100" width="35" height="35" class="key"/>
+  <text x="225" y="117.5" class="key-text">R</text>
 
-  <rect x="240" y="115" width="40" height="40" class="key"/>
-  <text x="260" y="135" class="key-text">R</text>
+  <rect x="247.5" y="100" width="35" height="35" class="key"/>
+  <text x="265" y="117.5" class="key-text">T</text>
 
-  <rect x="285" y="115" width="40" height="40" class="key"/>
-  <text x="305" y="135" class="key-text">T</text>
+  <rect x="287.5" y="100" width="35" height="35" class="key"/>
+  <text x="305" y="117.5" class="key-text">Y</text>
 
-  <rect x="330" y="115" width="40" height="40" class="key"/>
-  <text x="350" y="135" class="key-text">Y</text>
+  <rect x="327.5" y="100" width="35" height="35" class="key"/>
+  <text x="345" y="117.5" class="key-text">U</text>
 
-  <rect x="375" y="115" width="40" height="40" class="key"/>
-  <text x="395" y="135" class="key-text">U</text>
+  <rect x="367.5" y="100" width="35" height="35" class="key"/>
+  <text x="385" y="117.5" class="key-text">I</text>
 
-  <rect x="420" y="115" width="40" height="40" class="key"/>
-  <text x="440" y="135" class="key-text">I</text>
+  <rect x="407.5" y="100" width="35" height="35" class="key"/>
+  <text x="425" y="117.5" class="key-text">O</text>
 
-  <rect x="465" y="115" width="40" height="40" class="key"/>
-  <text x="485" y="135" class="key-text">O</text>
+  <rect x="447.5" y="100" width="35" height="35" class="key"/>
+  <text x="465" y="117.5" class="key-text">P</text>
 
-  <rect x="510" y="115" width="40" height="40" class="key"/>
-  <text x="530" y="135" class="key-text">P</text>
+  <rect x="487.5" y="100" width="35" height="35" class="key"/>
+  <text x="505" y="117.5" class="key-text">[</text>
 
-  <rect x="555" y="115" width="40" height="40" class="key"/>
-  <text x="575" y="135" class="key-text">[</text>
+  <rect x="527.5" y="100" width="35" height="35" class="key"/>
+  <text x="545" y="117.5" class="key-text">]</text>
 
-  <rect x="600" y="115" width="40" height="40" class="key"/>
-  <text x="620" y="135" class="key-text">]</text>
+  <rect x="567.5" y="100" width="52.5" height="35" class="key"/>
+  <text x="593.75" y="117.5" class="key-text">\</text>
 
-  <rect x="645" y="115" width="65" height="40" class="key"/>
-  <text x="677" y="135" class="key-text">\</text>
+  <!-- Row 3: 14 keys with 1.75x caps and 2.25x enter -->
+  <rect x="30" y="140" width="61.25" height="35" class="key"/>
+  <text x="60.625" y="157.5" class="key-text">`</text>
 
-  <!-- Row 3 -->
-  <rect x="40" y="160" width="60" height="40" class="key"/>
-  <text x="70" y="180" class="key-text">`</text>
+  <rect x="96.25" y="140" width="35" height="35" class="key"/>
+  <text x="113.75" y="157.5" class="key-text">A</text>
 
-  <rect x="105" y="160" width="40" height="40" class="key"/>
-  <text x="125" y="180" class="key-text">A</text>
+  <rect x="136.25" y="140" width="35" height="35" class="key"/>
+  <text x="153.75" y="157.5" class="key-text">S</text>
 
-  <rect x="150" y="160" width="40" height="40" class="key"/>
-  <text x="170" y="180" class="key-text">S</text>
+  <rect x="176.25" y="140" width="35" height="35" class="key"/>
+  <text x="193.75" y="157.5" class="key-text">D</text>
 
-  <rect x="195" y="160" width="40" height="40" class="key"/>
-  <text x="215" y="180" class="key-text">D</text>
+  <rect x="216.25" y="140" width="35" height="35" class="key"/>
+  <text x="233.75" y="157.5" class="key-text">F</text>
 
-  <rect x="240" y="160" width="40" height="40" class="key"/>
-  <text x="260" y="180" class="key-text">F</text>
+  <rect x="256.25" y="140" width="35" height="35" class="key"/>
+  <text x="273.75" y="157.5" class="key-text">G</text>
 
-  <rect x="285" y="160" width="40" height="40" class="key"/>
-  <text x="305" y="180" class="key-text">G</text>
+  <rect x="296.25" y="140" width="35" height="35" class="key"/>
+  <text x="313.75" y="157.5" class="key-text">H</text>
 
-  <rect x="330" y="160" width="40" height="40" class="key"/>
-  <text x="350" y="180" class="key-text">H</text>
+  <rect x="336.25" y="140" width="35" height="35" class="key"/>
+  <text x="353.75" y="157.5" class="key-text">J</text>
 
-  <rect x="375" y="160" width="40" height="40" class="key"/>
-  <text x="395" y="180" class="key-text">J</text>
+  <rect x="376.25" y="140" width="35" height="35" class="key"/>
+  <text x="393.75" y="157.5" class="key-text">K</text>
 
-  <rect x="420" y="160" width="40" height="40" class="key"/>
-  <text x="440" y="180" class="key-text">K</text>
+  <rect x="416.25" y="140" width="35" height="35" class="key"/>
+  <text x="433.75" y="157.5" class="key-text">L</text>
 
-  <rect x="465" y="160" width="40" height="40" class="key"/>
-  <text x="485" y="180" class="key-text">L</text>
+  <rect x="456.25" y="140" width="35" height="35" class="key"/>
+  <text x="473.75" y="157.5" class="key-text">;</text>
 
-  <rect x="510" y="160" width="40" height="40" class="key"/>
-  <text x="530" y="180" class="key-text">;</text>
+  <rect x="496.25" y="140" width="35" height="35" class="key"/>
+  <text x="513.75" y="157.5" class="key-text">'</text>
 
-  <rect x="555" y="160" width="40" height="40" class="key"/>
-  <text x="575" y="180" class="key-text">'</text>
+  <rect x="536.25" y="140" width="78.75" height="35" class="key"/>
+  <text x="575.625" y="157.5" class="key-text">⏎</text>
 
-  <rect x="600" y="160" width="40" height="40" class="key"/>
-  <text x="620" y="180" class="key-text">⏎</text>
+  <!-- Row 4: 14 keys with 2.25x left shift and 2.75x right shift -->
+  <rect x="30" y="180" width="78.75" height="35" class="key"/>
+  <text x="69.375" y="197.5" class="key-text">SHIFT</text>
 
-  <rect x="645" y="160" width="65" height="40" class="key"/>
-  <text x="677" y="180" class="key-text">⏎</text>
+  <rect x="113.75" y="180" width="35" height="35" class="key"/>
+  <text x="131.25" y="197.5" class="key-text">Z</text>
 
-  <!-- Row 4 -->
-  <rect x="40" y="205" width="75" height="40" class="key"/>
-  <text x="77" y="225" class="key-text">SHIFT</text>
+  <rect x="153.75" y="180" width="35" height="35" class="key"/>
+  <text x="171.25" y="197.5" class="key-text">X</text>
 
-  <rect x="120" y="205" width="75" height="40" class="key"/>
-  <text x="157" y="225" class="key-text">SHIFT</text>
+  <rect x="193.75" y="180" width="35" height="35" class="key"/>
+  <text x="211.25" y="197.5" class="key-text">C</text>
 
-  <rect x="200" y="205" width="40" height="40" class="key"/>
-  <text x="220" y="225" class="key-text">Z</text>
+  <rect x="233.75" y="180" width="35" height="35" class="key"/>
+  <text x="251.25" y="197.5" class="key-text">V</text>
 
-  <rect x="245" y="205" width="40" height="40" class="key"/>
-  <text x="265" y="225" class="key-text">X</text>
+  <rect x="273.75" y="180" width="35" height="35" class="key"/>
+  <text x="291.25" y="197.5" class="key-text">B</text>
 
-  <rect x="290" y="205" width="40" height="40" class="key"/>
-  <text x="310" y="225" class="key-text">C</text>
+  <rect x="313.75" y="180" width="35" height="35" class="key"/>
+  <text x="331.25" y="197.5" class="key-text">N</text>
 
-  <rect x="335" y="205" width="40" height="40" class="key"/>
-  <text x="355" y="225" class="key-text">V</text>
+  <rect x="353.75" y="180" width="35" height="35" class="key"/>
+  <text x="371.25" y="197.5" class="key-text">M</text>
 
-  <rect x="380" y="205" width="40" height="40" class="key"/>
-  <text x="400" y="225" class="key-text">B</text>
+  <rect x="393.75" y="180" width="35" height="35" class="key"/>
+  <text x="411.25" y="197.5" class="key-text">,</text>
 
-  <rect x="425" y="205" width="40" height="40" class="key"/>
-  <text x="445" y="225" class="key-text">N</text>
+  <rect x="433.75" y="180" width="35" height="35" class="key"/>
+  <text x="451.25" y="197.5" class="key-text">.</text>
 
-  <rect x="470" y="205" width="40" height="40" class="key"/>
-  <text x="490" y="225" class="key-text">M</text>
+  <rect x="473.75" y="180" width="35" height="35" class="key"/>
+  <text x="491.25" y="197.5" class="key-text">/</text>
 
-  <rect x="515" y="205" width="40" height="40" class="key"/>
-  <text x="535" y="225" class="key-text">,</text>
+  <rect x="513.75" y="180" width="96.25" height="35" class="key"/>
+  <text x="561.875" y="197.5" class="key-text">⇧</text>
 
-  <rect x="560" y="205" width="40" height="40" class="key"/>
-  <text x="580" y="225" class="key-text">.</text>
+  <rect x="615" y="180" width="40" height="35" class="key-layer"/>
+  <text x="635" y="197.5" class="key-text">⚙</text>
 
-  <rect x="605" y="205" width="40" height="40" class="key"/>
-  <text x="625" y="225" class="key-text">/</text>
+  <!-- Row 5: 7 keys with proper 1.25x modifiers and 6.25x space bar -->
+  <rect x="30" y="220" width="43.75" height="35" class="key"/>
+  <text x="51.875" y="237.5" class="key-text">⌃</text>
 
-  <rect x="650" y="205" width="75" height="40" class="key"/>
-  <text x="687" y="225" class="key-text">SHIFT</text>
+  <rect x="78.75" y="220" width="43.75" height="35" class="key"/>
+  <text x="100.625" y="237.5" class="key-text">⊞</text>
 
-  <rect x="730" y="205" width="50" height="40" class="key-layer"/>
-  <text x="755" y="225" class="key-text">⚙</text>
+  <rect x="127.5" y="220" width="43.75" height="35" class="key"/>
+  <text x="149.375" y="237.5" class="key-text">⌥</text>
 
-  <!-- Row 5 -->
-  <rect x="40" y="250" width="50" height="40" class="key"/>
-  <text x="65" y="270" class="key-text">⌃</text>
+  <rect x="176.25" y="220" width="218.75" height="35" class="key"/>
+  <text x="285.625" y="237.5" class="key-text">SPACE</text>
 
-  <rect x="95" y="250" width="50" height="40" class="key"/>
-  <text x="120" y="270" class="key-text">⊞</text>
+  <rect x="400" y="220" width="43.75" height="35" class="key"/>
+  <text x="421.875" y="237.5" class="key-text">⌥</text>
 
-  <rect x="150" y="250" width="50" height="40" class="key"/>
-  <text x="175" y="270" class="key-text">⌥</text>
+  <rect x="448.75" y="220" width="43.75" height="35" class="key-special"/>
+  <text x="470.625" y="237.5" class="key-text">RAISE</text>
 
-  <rect x="205" y="250" width="200" height="40" class="key"/>
-  <text x="305" y="270" class="key-text">SPACE</text>
-
-  <rect x="410" y="250" width="200" height="40" class="key"/>
-  <text x="510" y="270" class="key-text">SPACE</text>
-
-  <rect x="615" y="250" width="50" height="40" class="key"/>
-  <text x="640" y="270" class="key-text">⌥</text>
-
-  <rect x="670" y="250" width="60" height="40" class="key-special"/>
-  <text x="700" y="270" class="key-text">RAISE</text>
-
-  <rect x="735" y="250" width="50" height="40" class="key"/>
-  <text x="760" y="270" class="key-text">⌃</text>
-
-  <!-- Encoder -->
-  <circle cx="750" cy="140" r="25" class="encoder"/>
-  <text x="750" y="140" class="encoder-text">ENC</text>
-  <text x="750" y="150" class="encoder-text" style="font-size: 7px;">⏯</text>
+  <rect x="497.5" y="220" width="43.75" height="35" class="key"/>
+  <text x="519.375" y="237.5" class="key-text">⌃</text>
 
   <!-- Legend -->
-  <text x="40" y="320" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; fill: #9ca3af;">
-    Orange: Layer-tap (CONFIG on tap) | Blue: Momentary (RAISE on hold) | Dashed: Rotary encoder
+  <text x="30" y="265" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 10px; fill: #9ca3af;">
+    Orange: Layer-tap (CONFIG on tap) | Blue: Momentary (RAISE on hold)
   </text>
 </svg>
