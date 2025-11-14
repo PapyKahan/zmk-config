@@ -15,20 +15,34 @@ Custom 60% keyboard powered by nRF52840 with advanced features.
 
 ### Layers
 
-1. **DEFAULT** - Standard QWERTY layout
-2. **ALTERNATIVE** - Same as default with modified Windows key behavior (tap dance)
-3. **RAISE** (Right Alt) - Function keys, navigation (arrows, home/end, page up/down), mouse buttons, media controls
-4. **CONFIGURATION** (Context Menu) - Bluetooth pairing, output selection (USB/BT), RGB controls, bootloader access, system reset
-5. **UNDERGLOW** - RGB effect and color controls
+1. **DEFAULT (Layer 0)** - Standard QWERTY with GRAVE key, long spacebar, no right Win key
+2. **ALTERNATIVE (Layer 1)** - Same as DEFAULT but Win key outputs Win+Alt combo
+3. **RAISE (Layer 2)** - F1-F12, navigation (HOME/END/arrows/PG↑↓), media controls, mouse buttons (MB4/MB5)
+4. **CONFIGURATION (Layer 3)** - Bluetooth profiles, mouse movement, output selection (USB/BLE), media controls, system functions
+5. **UNDERGLOW (Layer 4)** - RGB lighting controls (effects, brightness, hue, saturation)
+
+**Layer Access:**
+- **RAISE**: Hold RAISE key (Row 5, right side between ALT and CTRL)
+- **CONFIGURATION**: Tap/hold CFG key (far right of Row 4)
+- **ALTERNATIVE**: Toggle from CONFIGURATION → TALT (Win position)
+- **UNDERGLOW**: From CONFIGURATION → hold UND (ESC position)
+
+See [detailed layer documentation](docs/keybinding-schema.md) for complete keymap visualization with SVG diagrams.
 
 ### Quick Access
 
-- **Bootloader Mode**: Hold ESC while plugging in, or press bootloader key in Configuration layer
-- **Volume**: Rotary encoder twist (or Vol Up/Down in Configuration layer)
+- **Bootloader Mode**: Hold ESC while plugging in, or CFG → BOOT (far right Row 3)
+- **Volume**: Rotary encoder twist
 - **Play/Pause**: Press rotary encoder
-- **Bluetooth Profiles**: Configuration layer → Number keys 1-4
-- **Clear BT Profile**: Configuration layer → Backspace
-- **Studio Mode**: Configuration layer → Caps Lock (studio_unlock)
+- **Function Keys**: RAISE + 1-9, 0, -, = for F1-F12
+- **Arrow Keys**: RAISE + Q/W/E for HOME/UP/END, A/S/D for arrows
+- **Bluetooth Profiles**: CFG → 1/2/3/4/5 for BT0-BT4
+- **Clear BT Profile**: CFG → BTCLR (backspace position)
+- **RGB Toggle**: CFG → UND (hold) → TOG
+- **RGB Controls**: CFG → UND → (-, =) for effects, ([, ], \) for brightness, (', #) for hue, (., /) for saturation
+- **System Reset**: CFG → RST (far right Row 5)
+- **Studio Mode**: CFG → STU (GRAVE position)
+- **Alternative Mode**: CFG → TALT (Win position) to toggle Win+Alt combo
 
 ### Building
 

@@ -4,12 +4,13 @@
     <style>
       .key { fill: #2d2d2d; stroke: #4a4a4a; stroke-width: 1; rx: 3; }
       .key-layer { fill: #ea580c; stroke: #f97316; stroke-width: 1.5; rx: 3; }
+      .key-special { fill: #581c87; stroke: #a855f7; stroke-width: 1; rx: 3; }
       .key-text { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 9px; font-weight: 500; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
-      .key-text-small { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 7px; font-weight: 500; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
+      .key-text-small { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; font-size: 6.5px; font-weight: 500; fill: #ffffff; text-anchor: middle; dominant-baseline: middle; }
     </style>
   </defs>
 
-  <!-- Row 1: ESC, 1-9, 0, -, =, BSPC (2u) [13 × 1u + 1 × 2u] -->
+  <!-- Row 1: ESC, 1-9, 0, -, =, BSPC (2u) -->
   <rect class="key" x="5" y="5" width="28" height="28"/>
   <text class="key-text" x="19" y="19">ESC</text>
 
@@ -175,12 +176,12 @@
   <rect class="key-layer" x="497" y="104" width="28" height="28"/>
   <text class="key-text-small" x="511" y="118">CFG</text>
 
-  <!-- Row 5: CTRL, WIN, ALT (3×1.25u), SPACE (6.25u), ALT, RAISE, CTRL (3×1.25u) -->
+  <!-- Row 5: CTRL, WIN+ALT (purple), ALT, SPACE (6.25u), ALT, RAISE, CTRL -->
   <rect class="key" x="5" y="137" width="40" height="28"/>
   <text class="key-text" x="25" y="151">CTRL</text>
 
-  <rect class="key" x="50" y="137" width="40" height="28"/>
-  <text class="key-text" x="70" y="151">WIN</text>
+  <rect class="key-special" x="50" y="137" width="40" height="28"/>
+  <text class="key-text-small" x="70" y="151">W+ALT</text>
 
   <rect class="key" x="95" y="137" width="40" height="28"/>
   <text class="key-text" x="115" y="151">ALT</text>

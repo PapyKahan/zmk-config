@@ -1,179 +1,213 @@
 # Cyber60 Keyboard Keybinding Schema
 
-This document provides a comprehensive analysis of the Cyber60 Rev D keyboard keybinding structure with dark theme SVG diagrams matching the actual keyboard aesthetic.
+Comprehensive documentation for the Cyber60 Rev D keyboard 5-layer system with visual SVG diagrams matching the actual keyboard aesthetic.
 
 ## Overview
 
-The Cyber60 keyboard features a sophisticated 5-layer system with custom behaviors, momentary layers, and special functions. This documentation visualizes the keybinding architecture with a dark theme that matches the actual keyboard's appearance.
+The Cyber60 features a sophisticated 5-layer keymap with custom behaviors, layer-tap functionality, and comprehensive system controls.
 
 ## Layer System Architecture
 
-![Layer Navigation Diagram](svg/layer-navigation-dark.svg)
+The keyboard has 5 distinct layers:
 
-The keyboard features 5 distinct layers with a dark theme design:
+1. **Layer 0 (DEFAULT)**: Base QWERTY layout
+2. **Layer 1 (ALTERNATIVE)**: QWERTY with Win+Alt combo key
+3. **Layer 2 (RAISE)**: Function keys, navigation, media, mouse buttons
+4. **Layer 3 (CONFIGURATION)**: Bluetooth, mouse movement, media controls, system functions
+5. **Layer 4 (UNDERGLOW)**: RGB lighting controls
 
-### Layer Navigation Flow
+### Layer Access Methods
 
-**Primary Access Methods:**
-- **DEFAULT** → **RAISE**: Hold Right Alt (momentary)
-- **DEFAULT** → **CONFIGURATION**: Tap Context Menu (layer-tap)
-- **CONFIGURATION** → **ALTERNATIVE**: Toggle Alternative layer
-- **CONFIGURATION** → **UNDERGLOW**: Hold RGB key (momentary)
-
-**Layer Return:**
-- Release momentary keys to return to previous layer
-- Toggle layers stay active until toggled again
+| Layer | Access Method | Key Location | Behavior |
+|-------|---------------|--------------|----------|
+| DEFAULT | Base layer | - | Always active unless another toggled on |
+| ALTERNATIVE | Toggle | CFG → TALT (Win position) | Toggle on/off from CONFIGURATION layer |
+| RAISE | Momentary | Right side between ALT and CTRL | Hold to activate, release to return |
+| CONFIGURATION | Layer-tap | Far right of Row 4 (CFG) | Tap or hold to activate |
+| UNDERGLOW | Momentary | CFG → UND (ESC position) | Hold from CONFIGURATION layer |
 
 ## Layer Layouts
 
-### DEFAULT Layer (0) - Base QWERTY
+### Layer 0: DEFAULT - Base QWERTY
 
-![DEFAULT Layer](svg/default-layer-exact.svg)
+![DEFAULT Layer](svg/default-layer-dark.svg)
 
-**Features:**
-- Standard QWERTY typing layout with dark theme keys
-- Tap dance Win key (single tap = Left GUI, double tap = Right GUI + Right Alt)
-- Rotary encoder: Volume up/down, Play/Pause click
-- Access to other layers via special keys
+**Layout Features:**
+- Standard QWERTY typing layout
+- **GRAVE** key (backtick `) on Row 3 left side
+- **Long spacebar** spanning 4 key positions
+- **Duplicate LSHFT** on Row 4 positions 1 and 2
+- **NO right Windows key** - bottom row: CTRL, WIN, ALT, SPACE, ALT, RAISE, CTRL
+- Two layer access keys highlighted in orange: **CFG** (K_CMENU) and **RAISE**
 
-**Key Highlights:**
-- **Context Menu** (orange): Layer-tap to CONFIGURATION layer
-- **Right Alt** (blue): Momentary RAISE layer
-- **Encoder**: Volume control and media playback
+**Special Keys:**
+- **CFG** (orange, far right Row 4): Layer-tap to CONFIGURATION layer
+- **RAISE** (orange, Row 5): Momentary access to RAISE layer
+- **Encoder**: Twist for volume, click for play/pause
 
-### ALTERNATIVE Layer (1) - Win+Alt Mode
+---
 
-Same layout as DEFAULT layer but with modified Win key behavior:
-- Win key activates Right GUI + Right Alt combination
-- Useful for specific keyboard shortcuts
-- Accessed via toggle from CONFIGURATION layer
+### Layer 1: ALTERNATIVE - Win+Alt Combo Mode
 
-### RAISE Layer (2) - Function & Media Controls
+![ALTERNATIVE Layer](svg/alternative-layer-dark.svg)
 
-![RAISE Layer](svg/raise-layer-exact.svg)
+**Differences from DEFAULT:**
+- **WIN key** (purple) outputs **Right GUI + Right Alt** combo (RG(RIGHT_ALT))
+- Useful for specific keyboard shortcuts requiring Win+Alt combination
+- All other keys identical to DEFAULT layer
 
-**Key Groups:**
-- **Function Keys** (blue): F1-F12, Delete
-- **Navigation** (green): Arrow keys, Home, End, Page Up/Down
-- **Media** (yellow): Insert, Print Screen
-- **Mouse** (pink): Mouse buttons 4-5
-- **Transparent**: Pass-through to DEFAULT layer
+**Activation:**
+- Toggle on/off from CONFIGURATION layer (CFG → TALT at Win position)
+- Once activated, stays active until toggled off
+- Returns to this layer instead of DEFAULT when releasing other momentary layers
 
-**Common Uses:**
-- Function key access (F1-F12)
-- Navigation and media control
-- Additional mouse buttons
+---
 
-### CONFIGURATION Layer (3) - System Controls
+### Layer 2: RAISE - Function & Navigation
 
-![CONFIGURATION Layer](svg/config-layer-exact.svg)
+![RAISE Layer](svg/raise-layer-dark.svg)
 
 **Key Groups:**
-- **Bluetooth** (blue): BT0-4 selection, Clear, Underglow access
-- **Mouse** (green): MB1, mouse movement controls, MB2
-- **Media** (yellow): Mute, Volume, Next/Previous, Brightness
-- **System** (red): USB/BLE output, Studio unlock, Bootloader, Reset
-- **Layer** (purple): Alternative layer toggle
+- **Function Keys** (blue): F1-F12 on number row
+- **Navigation** (green): CAPS, arrows (ASD), HOME/END (QE), PG↑/PG↓ (left of ;  and /)
+- **Media** (yellow): DEL, INS, PSCRN
+- **Mouse** (pink): MB4 (second Shift), MB5 (X key)
+- **Transparent** (gray dashed): All other keys pass through to base layer
 
-**Key Functions:**
-- **BT0-BT4**: Select Bluetooth profile
-- **CLR**: Clear current Bluetooth profile
+**Access:** Hold RAISE key (Row 5, right side between ALT and CTRL)
+
+**Key Positions:**
+- Row 1: —, F1-F12, DEL, DEL
+- Row 2: —, HOME, ↑, END, —×4, INS, —, PSCRN, —×2
+- Row 3: CAPS, ←, ↓, →, —×6, PG↑, —×2
+- Row 4: —, MB4, —, MB5, —×6, PG↓, —×2
+- Row 5: All transparent
+
+---
+
+### Layer 3: CONFIGURATION - System & Bluetooth
+
+![CONFIGURATION Layer](svg/configuration-layer-dark.svg)
+
+**Key Groups:**
+- **Bluetooth** (blue): BT0-BT4 profiles, USB/BLE selection, BTCLR
+- **Mouse Movement** (green): MB1/MB2, directional movement (WASD pattern on Row 2-3)
+- **Media Controls** (yellow): Mute, Volume, Next/Prev, Brightness
+- **System Functions** (red): Studio unlock, Bootloader, Reset
+- **Layer Controls** (orange/purple): UNDERGLOW access, ALTERNATIVE toggle
+
+**Access:** Tap or hold CFG key (far right of Row 4)
+
+**Key Positions:**
+- Row 1: **UND**, BT0-BT4, —×4, MUTE, VOL-, VOL+, BTCLR×2
+- Row 2: —, MB1, M↑, MB2, —×4, USB, —×5
+- Row 3: **STU**, M←, M↓, M→, —×6, NEXT, PREV, —×3, **BOOT**
+- Row 4: —×6, BLE, —×2, BR-, BR+, —×3
+- Row 5: —, **TALT**, —×7, **RST**
+
+**Special Functions:**
+- **UND** (ESC position): Hold to access UNDERGLOW layer
+- **STU** (GRAVE position): Unlock ZMK Studio
+- **BOOT** (far right Row 3): Enter bootloader/DFU mode
+- **RST** (far right Row 5): System reset
+- **TALT** (WIN position): Toggle ALTERNATIVE layer on/off
 - **USB/BLE**: Force output connection type
-- **STU**: Unlock ZMK Studio
-- **BOOT**: Enter bootloader mode
-- **RST**: System reset
-- **ALT**: Toggle Alternative layer
 
-### UNDERGLOW Layer (4) - RGB Controls
+---
 
-![UNDERGLOW Layer](svg/rgb-layer-exact.svg)
+### Layer 4: UNDERGLOW - RGB Lighting
+
+![UNDERGLOW Layer](svg/underglow-layer-dark.svg)
 
 **Key Groups:**
-- **Effect Control** (blue): Effect forward/reverse
-- **Brightness** (yellow): Brightness down/up, toggle on/off
-- **Hue Control** (purple): Hue down/up adjustment
-- **Saturation Control** (red): Saturation down/up adjustment
-- **Transparent**: Pass-through to CONFIGURATION layer
+- **Effects** (blue): EFF← / EFF→ (-, =)
+- **Brightness** (yellow): BRI- / BRI+ / TOG ([, ], \)
+- **Hue** (purple): HUE- / HUE+ (', NUHS)
+- **Saturation** (red): SAT- / SAT+ (., /)
 
-**RGB Functions:**
-- **EFF←/EFF→**: Cycle through RGB effects
-- **BRI-/BRI+**: Decrease/increase brightness
-- **TOG**: Toggle RGB on/off
-- **HUE-/HUE+**: Adjust color hue
+**Access:** From CONFIGURATION layer, hold UND key (ESC position)
+
+**RGB Controls:**
+- Row 1: —×10, **EFF←**, **EFF→**, —×3
+- Row 2: —×10, **BRI-**, **BRI+**, **TOG**
+- Row 3: —×10, **HUE-**, **HUE+**, —×2
+- Row 4: —×10, **SAT-**, **SAT+**, —×2
+- Row 5: All empty (—)
+
+**Functions:**
+- **EFF←/EFF→**: Cycle through RGB effect patterns
+- **BRI-/BRI+**: Adjust LED brightness
+- **TOG**: Toggle RGB underglow on/off
+- **HUE-/HUE+**: Shift color hue
 - **SAT-/SAT+**: Adjust color saturation
+
+---
 
 ## Custom Behaviors
 
-### Tap Dance (td0)
-- **Single tap**: Left GUI (Windows key)
-- **Double tap**: Right GUI + Right Alt combination
-- Useful for both standard Win key functionality and specific shortcuts
+### Tap Dance (td0) - NOT CURRENTLY USED
+Defined but not assigned in current keymap. Would provide:
+- Single tap: Left GUI
+- Double tap: Right GUI + Right Alt combo
 
-### Key Toggle (kt_on)
-- Toggle-on-only behavior
-- Stays active once enabled
+### Layer-Tap (lt)
+- **CFG Key**: Tap for context menu, hold for CONFIGURATION layer
+- Provides dual functionality for single key
 
-### Sensor Bindings
-- **Rotary Encoder**: Volume up/down by default, Play/Pause on click
-- **Pointing Device**: Enhanced mouse movement (speed: 1500 vs default 600)
+### Momentary Layer (mo)
+- **RAISE**: Hold to activate, release to return to base
+- **UNDERGLOW**: Hold from CONFIGURATION to access RGB controls
 
-## Key Features Summary
+### Toggle Layer (tog)
+- **ALTERNATIVE**: Stays active until toggled off
+- Accessed via TALT key in CONFIGURATION layer
 
-### Hardware Specifications
-- **MCU**: nRF52840 (ARM Cortex-M4)
-- **RGB**: 16 WS2812 LEDs with SPI3 control
-- **Encoder**: Rotary encoder with push button
-- **Pointing**: Mouse movement and button support
-- **Connectivity**: Bluetooth LE + USB with ZMK Studio
+---
 
-### Exact Layout Design
-- **Background**: Dark (#1a1a1a) matching real keyboard
-- **Keys**: Dark gray with subtle borders
-- **Text**: White/light for high contrast
-- **Color coding**: Functional groups with distinct colors
-- **Layout**: Exact 60% keyboard dimensions (15-14-14-14-7 key layout)
-- **Space bar**: Unsplit, single space bar spanning 4 key positions
+## Hardware Specifications
 
-### Layer Access Summary
-| Layer | Access Method | Key | Behavior |
-|-------|----------------|-----|----------|
-| DEFAULT | Base layer | - | Always active |
-| RAISE | Momentary | Right Alt | Hold to activate |
-| CONFIGURATION | Layer-tap | Context Menu | Tap to activate |
-| ALTERNATIVE | Toggle | CONFIG → ALT | Toggle on/off |
-| UNDERGLOW | Momentary | CONFIG → RGB | Hold to activate |
+- **MCU**: nRF52840 (ARM Cortex-M4, BLE 5.0, USB 2.0)
+- **RGB**: 16 WS2812 LEDs via SPI3
+- **Encoder**: Rotary with push button (volume/play-pause)
+- **Pointing**: Mouse movement support (speed: 1500)
+- **Layout**: Custom 60% with long spacebar
+- **Connectivity**: Bluetooth LE (4 profiles) + USB
+- **Studio**: ZMK Studio compatible via CDC ACM UART
 
-### Special Functions
-- **studio_unlock**: Enable ZMK Studio runtime configuration
-- **bootloader**: Enter DFU mode for firmware updates
-- **sys_reset**: Perform system reset
-- **RGB underglow**: 16 LED strip with SPI control
-- **Pointing device**: Enhanced mouse control
+## Usage Guide
 
-## File Reference
+### Quick Access Shortcuts
 
-- **Configuration**: `config/cyber60_rev_d.keymap`
-- **Hardware Definition**: `config/boards/arm/cyber60_rev_d/cyber60_rev_d.dts`
-- **Build Configuration**: `build.yaml`
+**Function Keys:** Hold RAISE + 1-9, 0, -, = for F1-F12
+**Navigation:** Hold RAISE + Q/W/E for HOME/UP/END, A/S/D for arrows
+**Bluetooth Profiles:** CFG → 1/2/3/4/5 for BT0-BT4
+**Clear BT:** CFG → BTCLR (backspace)
+**RGB Toggle:** CFG → UND (hold) → TOG
+**Bootloader:** CFG → BOOT (far right Row 3)
+**System Reset:** CFG → RST (far right Row 5)
+**Alternative Mode:** CFG → TALT (Win position) to toggle Win+Alt combo
 
-## Usage Tips
+### Firmware Updates
 
-1. **Layer Navigation**: Use Right Alt for quick access to function keys, Context Menu for system controls
-2. **Bluetooth Management**: Access via CONFIGURATION layer (Context Menu → BT keys)
-3. **RGB Control**: Access via CONFIGURATION layer (Context Menu → RGB key → UNDERGLOW layer)
-4. **Mouse Control**: Use CONFIGURATION layer for mouse movement and RAISE layer for mouse buttons 4-5
-5. **Firmware Updates**: Use BOOT key in CONFIGURATION layer to enter bootloader mode
+1. Enter bootloader: CFG → BOOT
+2. Or hold ESC while plugging in USB
+3. Flash new firmware via UF2 file
+
+### ZMK Studio Access
+
+1. CFG → STU (GRAVE position) to unlock
+2. Connect via USB
+3. Use ZMK Studio for runtime configuration
 
 ## Visual Design
 
-All SVG diagrams follow a consistent dark theme that matches the actual keyboard:
-- **Dark background** with high contrast text
-- **Exact 60% keyboard layout** with proper key positioning (15-14-14-14-7 layout)
-- **Realistic key styling** with subtle borders and rounded corners
-- **Color-coded functional groups** for easy identification
-- **Unsplit space bar** matching the actual hardware layout
-- **No encoder or extra hardware** - pure 60% keyboard representation
+All SVG diagrams use consistent dark theme styling:
+- **Size**: 530×175px (compact 60% keyboard representation)
+- **Style**: Dark keys (#2d2d2d) on transparent background
+- **Color coding**: Functional groups for easy identification
+- **No encoder graphics**: Pure keyboard layout focus
+- **Highlighting**: Orange for layer access keys
 
-This documentation provides a comprehensive overview of the Cyber60 keyboard's keybinding structure, showing how the layers interact and the special behaviors configured in the ZMK firmware, with visual representations that accurately match the real keyboard's appearance.
+---
 
-Generated from ZMK configuration analysis.
+*Documentation generated from `/home/kahan/sources/zmk-config/config/cyber60_rev_d.keymap`*
