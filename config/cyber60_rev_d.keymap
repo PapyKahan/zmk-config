@@ -4,7 +4,7 @@
 #include <dt-bindings/zmk/rgb.h>
 #include <dt-bindings/zmk/outputs.h>
 
-#define ZMK_POINTING_DEFAULT_MOVE_VAL 1500  // default: 600
+#define ZMK_POINTING_DEFAULT_MOVE_VAL 4000  // QMK: MOVE_DELTA(8) * MAX_SPEED(10) = 80/20ms = 4000/s
 
 #include <dt-bindings/zmk/pointing.h>
 
@@ -151,4 +151,15 @@
 			>;
         };
 	};
+};
+
+// QMK-like accelerated mouse cursor motion
+// QMK defaults: MOUSEKEY_DELAY=10, MOUSEKEY_INTERVAL=20, MOUSEKEY_TIME_TO_MAX=30
+// MOUSEKEY_MOVE_DELTA=8, MOUSEKEY_MAX_SPEED=10 → max 80 counts per 20ms = 4000 counts/s
+// QMK acceleration is linear: delta = MOVE_DELTA * MAX_SPEED * step / TIME_TO_MAX
+&mmv {
+    delay-ms = <10>;              // MOUSEKEY_DELAY = 10ms
+    trigger-period-ms = <20>;     // MOUSEKEY_INTERVAL = 20ms
+    time-to-max-speed-ms = <600>; // MOUSEKEY_TIME_TO_MAX(30) * MOUSEKEY_INTERVAL(20) = 600ms
+    acceleration-exponent = <1>;  // QMK uses linear acceleration (not quadratic)
 };
