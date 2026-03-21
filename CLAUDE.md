@@ -55,8 +55,8 @@ For local builds, you would need to:
 - **`config/cyber60_rev_d.keymap`**: Main keymap configuration with 5 layers:
   - Layer 0: DEFAULT - Standard QWERTY layout
   - Layer 1: ALTERNATIVE - Same as default but with different Win key behavior (tap dance)
-  - Layer 2: RAISE - Function keys, navigation (arrows, home/end), media controls
-  - Layer 3: CONFIGURATION - Bluetooth pairing, output selection, bootloader, reset, media controls
+  - Layer 2: RAISE - Function keys, navigation (arrows, home/end), mouse buttons (MB4/MB5 on Z/C keys)
+  - Layer 3: CONFIGURATION - Bluetooth pairing, output selection, bootloader, reset, mouse movement, media controls (bottom row)
   - Layer 4: UNDERGLOW - RGB lighting controls
 
 - **`config/cyber60_rev_d.conf`**: Feature flags and configuration options
@@ -128,7 +128,7 @@ Edit `config/cyber60_rev_d.keymap`:
 ### Bluetooth Configuration
 
 Bluetooth pairing managed in CONFIGURATION layer:
-- `bt BT_SEL 0-3`: Select bluetooth profile 0-3
+- `bt BT_SEL 0-4`: Select bluetooth profile 0-4
 - `bt BT_CLR`: Clear current bluetooth profile
 - `out OUT_BLE`: Force bluetooth output
 - `out OUT_USB`: Force USB output

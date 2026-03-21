@@ -139,21 +139,21 @@
   <rect class="key-trans" x="427" y="71" width="98" height="28"/>
   <text class="key-text key-text-trans" x="476" y="85">—</text>
 
-  <!-- Row 4: trans (2.25u), MB4, trans, MB5, trans×6, PG_DN, trans (1.75u), trans (1u) -->
+  <!-- Row 4: trans (2.25u), trans, MB4, trans, MB5, trans×5, PG_DN, trans (1.75u), trans (1u) -->
   <rect class="key-trans" x="5" y="104" width="68" height="28"/>
   <text class="key-text key-text-trans" x="39" y="118">—</text>
 
-  <rect class="key-mouse" x="78" y="104" width="28" height="28"/>
-  <text class="key-text" x="92" y="118">MB4</text>
+  <rect class="key-trans" x="78" y="104" width="28" height="28"/>
+  <text class="key-text key-text-trans" x="92" y="118">—</text>
 
-  <rect class="key-trans" x="111" y="104" width="28" height="28"/>
-  <text class="key-text key-text-trans" x="125" y="118">—</text>
+  <rect class="key-mouse" x="111" y="104" width="28" height="28"/>
+  <text class="key-text" x="125" y="118">MB4</text>
 
-  <rect class="key-mouse" x="144" y="104" width="28" height="28"/>
-  <text class="key-text" x="158" y="118">MB5</text>
+  <rect class="key-trans" x="144" y="104" width="28" height="28"/>
+  <text class="key-text key-text-trans" x="158" y="118">—</text>
 
-  <rect class="key-trans" x="177" y="104" width="28" height="28"/>
-  <text class="key-text key-text-trans" x="191" y="118">—</text>
+  <rect class="key-mouse" x="177" y="104" width="28" height="28"/>
+  <text class="key-text" x="191" y="118">MB5</text>
 
   <rect class="key-trans" x="210" y="104" width="28" height="28"/>
   <text class="key-text key-text-trans" x="224" y="118">—</text>

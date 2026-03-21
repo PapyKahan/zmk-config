@@ -71,7 +71,7 @@ The keyboard has 5 distinct layers:
 - **Function Keys** (blue): F1-F12 on number row
 - **Navigation** (green): CAPS, arrows (ASD), HOME/END (QE), PG↑/PG↓ (left of ;  and /)
 - **Media** (yellow): DEL, INS, PSCRN
-- **Mouse** (pink): MB4 (second Shift), MB5 (X key)
+- **Mouse** (pink): MB4 (Z key), MB5 (C key)
 - **Transparent** (gray dashed): All other keys pass through to base layer
 
 **Access:** Hold RAISE key (Row 5, right side between ALT and CTRL)
@@ -80,7 +80,7 @@ The keyboard has 5 distinct layers:
 - Row 1: —, F1-F12, DEL, DEL
 - Row 2: —, HOME, ↑, END, —×4, INS, —, PSCRN, —×2
 - Row 3: CAPS, ←, ↓, →, —×6, PG↑, —×2
-- Row 4: —, MB4, —, MB5, —×6, PG↓, —×2
+- Row 4: —×2, MB4, —, MB5, —×5, PG↓, —×2
 - Row 5: All transparent
 
 ---
@@ -101,9 +101,9 @@ The keyboard has 5 distinct layers:
 **Key Positions:**
 - Row 1: **UND**, BT0-BT4, —×4, MUTE, VOL-, VOL+, BTCLR×2
 - Row 2: —, MB1, M↑, MB2, —×4, USB, —×5
-- Row 3: **STU**, M←, M↓, M→, —×6, NEXT, PREV, —×3, **BOOT**
-- Row 4: —×6, BLE, —×2, BR-, BR+, —×3
-- Row 5: —, **TALT**, —×7, **RST**
+- Row 3: **STU**, M←, M↓, M→, —×9, **BOOT**
+- Row 4: SHIFT, —×5, BLE, —×2, BR-, BR+, —×3
+- Row 5: —, **TALT**, PRV, —, PLAY, —×2, NXT, —, **RST**
 
 **Special Functions:**
 - **UND** (ESC position): Hold to access UNDERGLOW layer
@@ -171,7 +171,7 @@ Defined but not assigned in current keymap. Would provide:
 - **Encoder**: Rotary with push button (volume/play-pause)
 - **Pointing**: Mouse movement support (speed: 1500)
 - **Layout**: Custom 60% with long spacebar
-- **Connectivity**: Bluetooth LE (4 profiles) + USB
+- **Connectivity**: Bluetooth LE (5 profiles) + USB
 - **Studio**: ZMK Studio compatible via CDC ACM UART
 
 ## Usage Guide
